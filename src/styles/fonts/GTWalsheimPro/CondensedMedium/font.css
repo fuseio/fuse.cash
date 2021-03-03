@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'GTWalsheimPro-CondensedMedium';
+  src: url('GTWalsheimPro-CondensedMedium.eot');
+  src: url('GTWalsheimPro-CondensedMedium.eot?#iefix') format('embedded-opentype'),
+       url('GTWalsheimPro-CondensedMedium.svg#GTWalsheimPro-CondensedMedium') format('svg'),
+       url('GTWalsheimPro-CondensedMedium.ttf') format('truetype'),
+       url('GTWalsheimPro-CondensedMedium.woff') format('woff'),
+       url('GTWalsheimPro-CondensedMedium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

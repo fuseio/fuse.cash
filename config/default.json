@@ -1,0 +1,9 @@
+{
+  "reactGA": {
+    "trackingId": "",
+    "gaOptions": {
+      "testMode": true,
+      "debug": true
+    }
+  }
+}
