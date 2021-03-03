@@ -4,8 +4,8 @@ import { ReactComponent as GithubIcon } from '@/assets/images/github_white.svg'
 import { ReactComponent as MediumIcon } from '@/assets/images/medium_white.svg'
 import { ReactComponent as DiscordIcon } from '@/assets/images/discord.svg'
 import { ReactComponent as TelegramIcon } from '@/assets/images/tele.svg'
-import FooterLogo from '@/assets/images/fuse_logo.svg'
-import FuseCashLogo from '@/assets/images/fuse.cash.svg'
+import { ReactComponent as FooterLogo } from '@/assets/images/fuse_logo.svg'
+import { ReactComponent as FuseCashLogo } from '@/assets/images/fuse.cash.svg'
 
 const links = [
   {
@@ -55,15 +55,14 @@ const HoverIcon = ({ Icon, Hover, href }) => {
   )
 }
 
-function Footer() {
+function Footer () {
   return (
     <footer className='footer__wrapper grid-x'>
       <div className='footer'>
         <div className='footer__item'>
-          <div className='grid-y align-center'>
+          <div className='grid-y align-center align-middle'>
             <a rel='noreferrer noopener' className='footer__logo'>
-              {/* <FooterLogo /> */}
-              <img src={FooterLogo} />
+              <FooterLogo />
             </a>
             <span>Powered by fuse.io</span>
           </div>
@@ -87,8 +86,8 @@ function Footer() {
           </div>
         </div>
         <div className='footer__item '>
-          <div className='grid-y align-center'>
-            <img src={FuseCashLogo} alt='fuse.cash' />
+          <div className='grid-y align-center align-middle'>
+            <div className='footer__small-logo'><FuseCashLogo /></div>
             <span className='footer__copyright'>fuse rights 2021</span>
           </div>
         </div>

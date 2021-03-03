@@ -112,9 +112,9 @@
   }
 
   @include block(land) {
-    // margin-top: auto;
-    position: sticky;
-    bottom: 0;
+    margin-top: auto;
+    // position: sticky;
+    // bottom: 0;
   }
 }
 
@@ -165,7 +165,15 @@
 
   @include element(logo) {
     width: 125px;
+    max-width: 125px;
+    max-height: fit-content;
     margin-bottom: 1em;
+  }
+
+  @include element(small-logo) {
+    width: 30px;
+    max-width: 30px;
+    max-height: fit-content;
   }
 
   @include element(item) {
@@ -222,6 +230,6 @@
 
   @include element(copyright) {
     color: white;
-    margin: 2em 0 1em;
+    margin-bottom: 1em;
   }
 }
