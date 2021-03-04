@@ -39,11 +39,16 @@
     font-family: "GTWalsheimPro-Bold";
     font-weight: 500;
     color: white;
-    width: 608px;
     text-align: center;
     > span {
       color: #47cd8a;
       font-weight: bold;
+    }
+    @include breakpoint(down down) {
+      max-width: 90%;
+    }
+    @include breakpoint(large up) {
+      width: 608px;
     }
   }
 
