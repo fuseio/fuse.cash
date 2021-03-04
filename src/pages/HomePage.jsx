@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from 'react'
 import Rellax from 'rellax'
-import Stars from '@/assets/images/stars.jpg'
+import Stars from '@/assets/images/stars1.png'
 import Star from '@/assets/images/space-star.png'
 import Moon from '@/assets/images/moon.png'
 import Phone from '@/assets/images/iphone.png'
-import Land from '@/assets/images/land.png'
+// import Land from '@/assets/images/land.png'
+import Land2 from '@/assets/images/land2.png'
 import Footer from '@/components/footer'
+import SignUpForm from '@/components/SignUp'
 import Apple from '@/assets/images/apple.png'
 import Google from '@/assets/images/google.png'
 
@@ -14,17 +16,6 @@ function HomePage () {
   const moonRef = useRef()
   const phoneRef = useRef()
   const titleRef = useRef()
-  const landRef = useRef()
-
-  useEffect(() => {
-    const rellax = new Rellax(landRef.current, {
-      speed: 0,
-      center: true
-    })
-    return () => {
-      rellax.destroy()
-    }
-  }, [])
 
   useEffect(() => {
     const rellax = new Rellax(titleRef.current, {
@@ -59,7 +50,7 @@ function HomePage () {
 
   useEffect(() => {
     const rellax = new Rellax(phoneRef.current, {
-      speed: 6,
+      speed: 5,
       center: true,
       round: true
     })
@@ -91,14 +82,9 @@ function HomePage () {
           </div>
         </div>
 
-        <div className='sign_up'>
+        <SignUpForm />
 
-          <div className='title'>Sign up to the waiting list</div>
-          <input placeholder='Email' className='input' type='email' />
-          <button className='button'>Send</button>
-        </div>
-
-        <img ref={landRef} className='land' src={Land} alt='land' />
+        <img className='land' src={Land2} alt='land' />
       </section>
       <Footer />
     </>

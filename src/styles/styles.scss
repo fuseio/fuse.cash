@@ -10,6 +10,13 @@
 @import "fonts/GTWalsheimPro/Medium/font.css";
 @import "fonts/GTWalsheimPro/Regular/font.css";
 
+@include block(root) {
+  position: relative;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 @include block(main) {
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,14 +26,16 @@
   @include xy-grid-container();
 
   @include block(title) {
-    font-size: 50px;
+    font-size: 3.125em;
     font-weight: bold;
     color: #47cd8a;
     font-family: "GTWalsheimPro-Bold";
+    text-align: center;
+    margin-bottom: 10em;
   }
 
   @include block(use_your) {
-    font-size: 30px;
+    font-size: 1.875em;
     font-family: "GTWalsheimPro-Bold";
     font-weight: 500;
     color: white;
@@ -39,7 +48,7 @@
   }
 
   @include block(images) {
-    margin-top: 10em;
+    // margin-top: 10em;
     @include xy-grid(vertical);
     @include flex-align(center, middle);
 
@@ -49,7 +58,6 @@
 
     @include block(moon) {
       width: 530px;
-      margin-bottom: -20px;
     }
 
     @include block(phone) {
@@ -71,11 +79,21 @@
     }
 
     @include block(apps) {
-      @include xy-grid();
       @include flex-align(center, middle);
+      @include breakpoint(medium up) {
+        @include xy-grid();
+      }
+      @include breakpoint(medium down) {
+        @include xy-grid(vertical);
+      }
       img {
-        // height: 40px;
-        width: 200px;
+        @include breakpoint(medium up) {
+          width: 200px;
+        }
+
+        @include breakpoint(medium down) {
+          width: 200px;
+        }
       }
     }
   }
@@ -99,22 +117,32 @@
       height: 36px;
       border-radius: 4px;
       width: 400px;
+      color: white;
+      padding-left: 5px;
+      @include breakpoint(medium down) {
+        width: 90%;
+      }
+
+      &::-webkit-input-placeholder {
+        // padding-left: 5px;
+        color: white;
+      }
     }
 
     @include block(button) {
       margin-top: 1em;
       background-color: #47cd8a;
       border-radius: 4px;
-      width: 80px;
+      // width: 80px;
       font-weight: 500;
       height: 36px;
+      padding: 0 1em;
     }
   }
 
   @include block(land) {
-    margin-top: auto;
-    // position: sticky;
-    // bottom: 0;
+    position: sticky;
+    bottom: 0;
   }
 }
 
@@ -185,46 +213,6 @@
 
     @include breakpoint(small only) {
       margin: 1em 0;
-    }
-  }
-
-  @include element(sign) {
-    position: relative;
-    @include block(title) {
-      font-size: 1.1em;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: white;
-      margin-bottom: 0.4em;
-    }
-
-    @include block(error) {
-      position: absolute;
-      bottom: -1.5em;
-      color: red;
-    }
-
-    @include block(input) {
-      max-width: 299px;
-      height: 54px;
-      border-radius: 10px;
-      border: solid 1px rgba(151, 151, 151, 0.35);
-      background-color: #ffffff;
-      color: #052235;
-      padding: 10px;
-      border: 1.5px solid transparent;
-
-      &:focus {
-        border: 1.5px solid #ccd9e0;
-      }
-
-      &:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
     }
   }
 

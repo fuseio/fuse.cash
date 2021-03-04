@@ -81,15 +81,18 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              bypassOnDebug: true,
               gifsicle: {
                 interlaced: false
               },
               optipng: {
-                optimizationLevel: 7
+                optimizationLevel: 3
               },
               pngquant: {
+                quality: [0.65, 0.90],
                 speed: 4
+              },
+              webp: {
+                quality: 75
               },
               mozjpeg: {
                 progressive: true
