@@ -31,7 +31,7 @@ const HoverIcon = ({ Icon, Hover, href }) => {
   )
 }
 
-function HomePage () {
+function HomePage() {
   const starRef = useRef()
   const moonRef = useRef()
   const phoneRef = useRef()
@@ -50,6 +50,7 @@ function HomePage () {
     const rellax = new Rellax(starRef.current, {
       speed: isMobile ? -2 : -3,
       center: true,
+      wrapper: '.images',
       round: true
     })
     return () => {
@@ -90,7 +91,7 @@ function HomePage () {
       </div>
 
       <div className='use_your'>
-        Use your Crypto money everyday for Buying, Swapping and Saving, and without fees, you know, like <span>cash.</span>
+        Use your crypto money everyday to buy, swap and save.  All without fees.  You know... like <span>cash.</span>
         <div className='title'>Coming soon</div>
         <div className='apps'>
           <img src={Apple} />
