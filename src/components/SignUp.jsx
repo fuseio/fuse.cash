@@ -30,7 +30,6 @@ function SignUpForm () {
           >
             Send
           </button>
-          <button type='button' className='button vrlps-trigger'>Join our campaign!</button>
           <ErrorMessage name='email' />
         </Form>
       )}

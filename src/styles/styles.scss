@@ -26,13 +26,16 @@
   @include flex-align(center, middle);
   @include xy-grid-container();
 
-  @include block(title) {
+  @include element(title) {
     font-size: 3.125em;
     font-weight: bold;
     color: #47cd8a;
     font-family: "GTWalsheimPro-Bold";
     text-align: center;
     padding-bottom: 10em;
+    @include breakpoint(small down) {
+      font-size: 1.725em;
+    }
   }
 
   @include block(use_your) {
@@ -41,98 +44,13 @@
     color: white;
     text-align: center;
     padding-bottom: 10em;
-    > span {
-      color: #47cd8a;
-      font-family: "GTWalsheimPro-Bold";
-      font-weight: bold;
-      font-style: italic;
-    }
-    @include breakpoint(medium down) {
-      max-width: 90%;
-    }
-    @include breakpoint(large up) {
-      width: 608px;
-    }
-  }
-
-  @include block(images) {
-    @include xy-grid(vertical);
-    @include flex-align(center, middle);
-
-    @include block(star) {
-      width: 180px;
-    }
-
-    @include block(moon) {
-      width: 530px;
-    }
-
-    @include block(phone) {
-      width: 350px;
-    }
-  }
-
-  @include block(coming_soon) {
-    z-index: 5;
-    @include xy-grid(vertical);
-    @include flex-align(center, middle);
-    @include breakpoint(medium up) {
-      position: relative;
-      left: -50%;
-    }
-
-    @include element(wrapper) {
-      @include breakpoint(medium up) {
-        position: absolute;
-        left: 50%;
-      }
-    }
-
-    @include block(sign_up) {
-      padding-top: 3em;
-      @include xy-grid(vertical);
-      @include flex-align(center, middle);
-      @include block(title) {
-        padding-top: 3em;
-        font-size: 1.5em;
-        font-weight: 500;
-        color: white;
-        padding-bottom: 0.4em;
-      }
-
-      @include block(input) {
-        padding-top: 1em;
-        background-color: black;
-        border: 1px solid white;
-        height: 36px;
-        border-radius: 4px;
-        width: 400px;
-        color: white;
-        padding-left: 5px;
-        @include breakpoint(medium down) {
-          width: 90%;
-        }
-
-        &::-webkit-input-placeholder {
-          color: white;
-        }
-      }
-
-      @include block(button) {
-        background-color: #47cd8a;
-        border-radius: 4px;
-        font-weight: 500;
-        height: 36px;
-        padding: 0 1em;
-      }
-    }
 
     @include block(title) {
       font-family: "GTWalsheimPro-Bold";
-      font-size: 1.5em;
+      font-size: 24px;
       font-weight: 500;
       color: white;
-      padding-bottom: 0.4em;
+      padding: 2em 0 0.4em;
     }
 
     @include block(apps) {
@@ -153,6 +71,106 @@
         }
       }
     }
+    @include breakpoint(small down) {
+      font-size: 1.275em;
+    }
+    > span {
+      color: #47cd8a;
+      font-family: "GTWalsheimPro-Bold";
+      font-weight: bold;
+      font-style: italic;
+    }
+    @include breakpoint(medium down) {
+      padding-bottom: 5em;
+      max-width: 90%;
+    }
+    @include breakpoint(large up) {
+      width: 608px;
+    }
+  }
+
+  @include block(images) {
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+
+    @include block(star) {
+      width: 180px;
+      @include breakpoint(small down) {
+        width: 130px;
+      }
+    }
+
+    @include block(moon) {
+      width: 530px;
+      @include breakpoint(small down) {
+        width: 80%;
+      }
+    }
+
+    @include block(phone) {
+      width: 350px;
+      @include breakpoint(small down) {
+        width: 250px;
+      }
+    }
+  }
+
+  @include block(coming_soon) {
+    z-index: 5;
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+    @include breakpoint(medium up) {
+      position: relative;
+      left: -50%;
+    }
+
+    @include element(wrapper) {
+      @include breakpoint(medium up) {
+        position: absolute;
+        left: 50%;
+        top: -46px;
+      }
+    }
+
+    @include block(sign_up) {
+      padding-top: 3em;
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+      @include block(title) {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: white;
+      }
+
+      @include block(input) {
+        background-color: black;
+        border: 1px solid white;
+        height: 50px;
+        border-radius: 4px;
+        width: 110%;
+        color: white;
+        padding-left: 15px;
+        font-size: 1.5em;
+        margin: 1em 0;
+        @include breakpoint(medium down) {
+          width: 90%;
+        }
+
+        &::-webkit-input-placeholder {
+          color: white;
+        }
+      }
+
+      @include block(button) {
+        margin-top: 0.4em;
+        font-size: 20px;
+        background-color: #47cd8a;
+        border-radius: 4px;
+        font-weight: 500;
+        height: 50px;
+        padding: 0 1em;
+      }
+    }
   }
 
   @include block(image) {
@@ -160,13 +178,21 @@
 
     @include block(logo) {
       @include element(wrapper) {
-        padding: 0.4em;
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        @include breakpoint(medium down) {
+          background: black;
+          padding: 1.4em;
+        }
+        @include breakpoint(medium up) {
+          padding: 0.4em;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
 
-        > svg {
-          width: 70px;
+        svg {
+          // width: 70px;
+          height: 25px;
+          // max-width: 70px;
           padding-bottom: 0.4em;
         }
         span {
@@ -182,81 +208,5 @@
   }
   @include block(land) {
     margin-bottom: auto;
-  }
-}
-
-@include block(footer) {
-  height: 100%;
-  width: 100%;
-  @include xy-grid-container();
-  @include xy-grid(vertical);
-  @include flex-align(center, middle);
-
-  @include element(wrapper) {
-    background: black;
-    padding: 2em 20px 0em;
-
-    @include modifier(dark) {
-      background-color: #001929;
-      padding: 2em 20px 6em;
-    }
-  }
-
-  @include breakpoint(medium down) {
-    transform: unset;
-  }
-
-  @include element(icons) {
-  }
-
-  @include element(icon) {
-    cursor: pointer;
-
-    &:not(:last-child) {
-      margin-right: 2em;
-    }
-  }
-
-  @include block(image) {
-    height: 47px;
-    width: 47px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @include breakpoint(small only) {
-      height: 35px;
-      width: 35px;
-    }
-  }
-
-  @include element(logo) {
-    width: 125px;
-    max-width: 125px;
-    max-height: fit-content;
-    padding-bottom: 1em;
-  }
-
-  @include element(small-logo) {
-    width: 30px;
-    max-width: 30px;
-    max-height: fit-content;
-  }
-
-  @include element(item) {
-    color: white;
-
-    &:not(:last-child) {
-      padding-bottom: 2em;
-    }
-
-    @include breakpoint(small only) {
-      margin: 1em 0;
-    }
-  }
-
-  @include element(copyright) {
-    color: white;
-    padding-bottom: 1em;
   }
 }
