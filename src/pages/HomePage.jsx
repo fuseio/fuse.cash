@@ -50,7 +50,6 @@ function HomePage() {
     const rellax = new Rellax(starRef.current, {
       speed: isMobile ? -2 : -3,
       center: true,
-      wrapper: '.images',
       round: true
     })
     return () => {
