@@ -20,6 +20,7 @@
 @include block(main) {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 25em;
   @include xy-grid(vertical);
   @include flex-align(center, middle);
@@ -31,20 +32,22 @@
     color: #47cd8a;
     font-family: "GTWalsheimPro-Bold";
     text-align: center;
-    margin-bottom: 10em;
+    padding-bottom: 10em;
   }
 
   @include block(use_your) {
-    font-size: 1.875em;
-    font-family: "GTWalsheimPro-Bold";
-    font-weight: 500;
+    font-size: 2.275em;
+    font-family: "GTWalsheimPro-Medium";
     color: white;
     text-align: center;
+    padding-bottom: 10em;
     > span {
       color: #47cd8a;
+      font-family: "GTWalsheimPro-Bold";
       font-weight: bold;
+      font-style: italic;
     }
-    @include breakpoint(down down) {
+    @include breakpoint(medium down) {
       max-width: 90%;
     }
     @include breakpoint(large up) {
@@ -53,7 +56,6 @@
   }
 
   @include block(images) {
-    // margin-top: 10em;
     @include xy-grid(vertical);
     @include flex-align(center, middle);
 
@@ -71,16 +73,66 @@
   }
 
   @include block(coming_soon) {
+    z-index: 5;
     @include xy-grid(vertical);
     @include flex-align(center, middle);
+    @include breakpoint(medium up) {
+      position: relative;
+      left: -50%;
+    }
+
+    @include element(wrapper) {
+      @include breakpoint(medium up) {
+        position: absolute;
+        left: 50%;
+      }
+    }
+
+    @include block(sign_up) {
+      padding-top: 3em;
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+      @include block(title) {
+        padding-top: 3em;
+        font-size: 1.5em;
+        font-weight: 500;
+        color: white;
+        padding-bottom: 0.4em;
+      }
+
+      @include block(input) {
+        padding-top: 1em;
+        background-color: black;
+        border: 1px solid white;
+        height: 36px;
+        border-radius: 4px;
+        width: 400px;
+        color: white;
+        padding-left: 5px;
+        @include breakpoint(medium down) {
+          width: 90%;
+        }
+
+        &::-webkit-input-placeholder {
+          color: white;
+        }
+      }
+
+      @include block(button) {
+        background-color: #47cd8a;
+        border-radius: 4px;
+        font-weight: 500;
+        height: 36px;
+        padding: 0 1em;
+      }
+    }
 
     @include block(title) {
       font-family: "GTWalsheimPro-Bold";
-      margin-top: 3em;
       font-size: 1.5em;
       font-weight: 500;
       color: white;
-      margin-bottom: 0.4em;
+      padding-bottom: 0.4em;
     }
 
     @include block(apps) {
@@ -103,51 +155,33 @@
     }
   }
 
-  @include block(sign_up) {
-    margin-top: 3em;
-    @include xy-grid(vertical);
-    @include flex-align(center, middle);
-    @include block(title) {
-      margin-top: 3em;
-      font-size: 1.5em;
-      font-weight: 500;
-      color: white;
-      margin-bottom: 0.4em;
-    }
+  @include block(image) {
+    position: relative;
 
-    @include block(input) {
-      margin-top: 1em;
-      background-color: black;
-      border: 1px solid white;
-      height: 36px;
-      border-radius: 4px;
-      width: 400px;
-      color: white;
-      padding-left: 5px;
-      @include breakpoint(medium down) {
-        width: 90%;
-      }
+    @include block(logo) {
+      @include element(wrapper) {
+        padding: 0.4em;
+        position: absolute;
+        right: 0;
+        bottom: 0;
 
-      &::-webkit-input-placeholder {
-        // padding-left: 5px;
-        color: white;
+        > svg {
+          width: 70px;
+          padding-bottom: 0.4em;
+        }
+        span {
+          font-weight: bold;
+          color: white;
+        }
       }
     }
 
-    @include block(button) {
-      margin-top: 1em;
-      background-color: #47cd8a;
-      border-radius: 4px;
-      // width: 80px;
-      font-weight: 500;
-      height: 36px;
-      padding: 0 1em;
+    @include element(wrapper) {
+      position: relative;
     }
   }
-
   @include block(land) {
-    position: sticky;
-    bottom: 0;
+    margin-bottom: auto;
   }
 }
 
@@ -200,7 +234,7 @@
     width: 125px;
     max-width: 125px;
     max-height: fit-content;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
   }
 
   @include element(small-logo) {
@@ -213,7 +247,7 @@
     color: white;
 
     &:not(:last-child) {
-      margin-bottom: 2em;
+      padding-bottom: 2em;
     }
 
     @include breakpoint(small only) {
@@ -223,6 +257,6 @@
 
   @include element(copyright) {
     color: white;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
   }
 }

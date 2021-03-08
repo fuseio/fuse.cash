@@ -1,16 +1,12 @@
 import React from 'react'
 import { object, string } from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-// Campaign ID:hsSqLRecQxQlQ7u6xLjh7VdLO0g
 
-// Secret API token:i6hb7MNlDT993wsEsBAWb46OQ1Q
 const SignUpSchema = object().shape({
   email: string().email('Invalid email').required('Required')
 })
 
-function SignUpForm() {
-  // const [title, setTitle] = useState('')
-
+function SignUpForm () {
   return (
     <Formik
       initialValues={{ email: '' }}
@@ -34,7 +30,7 @@ function SignUpForm() {
           >
             Send
           </button>
-          <button type='button' class='button vrlps-trigger'>Join our campaign!</button>
+          <button type='button' className='button vrlps-trigger'>Join our campaign!</button>
           <ErrorMessage name='email' />
         </Form>
       )}
