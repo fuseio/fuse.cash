@@ -19,16 +19,9 @@
 
 @include block(main) {
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 
-  @include breakpoint(medium up) {
-    background-size: contain;
-    background-position: top;
-  }
-
-  @include breakpoint(medium down) {
-    background-size: cover;
-    background-position: top;
-  }
   padding-top: 25em;
   @include xy-grid(vertical);
   @include flex-align(center, middle);
