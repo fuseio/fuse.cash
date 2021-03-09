@@ -7,11 +7,54 @@
   <title>Fuse.Cash</title>
   <meta name="description" content="" />
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7000716/7821612/css/fonts.css" />
-  <script>!function(m,a,i,t,r,e){if(m.RH)return;r=m.RH={},r.uuid=t,r.loaded=0,r.base_url=i,r.queue=[],m.rht=function(){r.queue.push(arguments)};e=a.getElementsByTagName('script')[0],c=a.createElement('script');c.async=!0,c.src=i+'/widget/'+t+'.js',e.parentNode.insertBefore(c,e)}(window,document,'https://app.referralhero.com','MF453dc29c6d');</script> 
+  <style>
+    .loader-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .loader {
+      margin: auto;
+      border: 5px dotted #dadada;
+      border-top: 5px solid #47cd8a;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script>!function (m, a, i, t, r, e) { if (m.RH) return; r = m.RH = {}, r.uuid = t, r.loaded = 0, r.base_url = i, r.queue = [], m.rht = function () { r.queue.push(arguments) }; e = a.getElementsByTagName('script')[0], c = a.createElement('script'); c.async = !0, c.src = i + '/widget/' + t + '.js', e.parentNode.insertBefore(c, e) }(window, document, 'https://app.referralhero.com', 'MF453dc29c6d');</script>
 </head>
 
 <body>
-  <div id="root" class="root"></div>
+  <div id="root" class="root">
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+  </div>
 </body>
 
 </html>
