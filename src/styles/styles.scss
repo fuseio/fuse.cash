@@ -19,8 +19,16 @@
 
 @include block(main) {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+  @include breakpoint(medium up) {
+    background-size: contain;
+    background-position: top;
+  }
+
+  @include breakpoint(medium down) {
+    background-size: cover;
+    background-position: top;
+  }
   padding-top: 25em;
   @include xy-grid(vertical);
   @include flex-align(center, middle);
@@ -44,6 +52,7 @@
     color: white;
     text-align: center;
     padding-bottom: 10em;
+    margin-top: 15em;
 
     @include block(title) {
       font-family: "GTWalsheimPro-Bold";

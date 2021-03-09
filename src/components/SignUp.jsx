@@ -11,7 +11,8 @@ function SignUpForm () {
     <Formik
       initialValues={{ email: '' }}
       validationSchema={SignUpSchema}
-      onSubmit={async (values, { setSubmitting, resetForm }) => {
+      onSubmit={(values) => {
+        RH.form.submit(values)
       }}
     >
       {({ isSubmitting, dirty }) => (

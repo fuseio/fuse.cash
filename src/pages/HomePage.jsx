@@ -39,6 +39,7 @@ function HomePage() {
 
   useEffect(() => {
     const rellax = new Rellax(titleRef.current, {
+      speed: -4,
       center: true
     })
     return () => {
@@ -48,7 +49,7 @@ function HomePage() {
 
   useEffect(() => {
     const rellax = new Rellax(starRef.current, {
-      speed: isMobile ? -2 : -3,
+      speed: isMobile ? -2 : -5,
       center: true,
       round: true
     })
@@ -59,7 +60,7 @@ function HomePage() {
 
   useEffect(() => {
     const rellax = new Rellax(moonRef.current, {
-      speed: 0,
+      speed: -2,
       center: true,
       round: true
     })
@@ -70,7 +71,7 @@ function HomePage() {
 
   useEffect(() => {
     const rellax = new Rellax(phoneRef.current, {
-      speed: 2,
+      speed: -1,
       center: true,
       round: true
     })
