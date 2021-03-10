@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import Rellax from 'rellax'
-import Stars from '@/assets/images/stars.png'
+import Stars from '@/assets/images/stars.jpg'
 import Star from '@/assets/images/space-star.png'
 import Moon from '@/assets/images/moon.png'
 import Phone from '@/assets/images/iphone.png'

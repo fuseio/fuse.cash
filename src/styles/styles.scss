@@ -40,7 +40,7 @@
   }
 
   @include block(use_your) {
-    font-size: 2.275em;
+    font-size: 3.125em;
     font-family: "GTWalsheimPro-Medium";
     color: white;
     text-align: center;
@@ -60,21 +60,12 @@
       @include breakpoint(medium up) {
         @include xy-grid();
       }
-      @include breakpoint(medium down) {
-        @include xy-grid(vertical);
-      }
       img {
-        @include breakpoint(medium up) {
-          width: 200px;
-        }
-
-        @include breakpoint(medium down) {
-          width: 200px;
-        }
+        width: 150px;
       }
     }
     @include breakpoint(small down) {
-      font-size: 1.275em;
+      font-size: 1.725em;
     }
     > span {
       color: #47cd8a;
