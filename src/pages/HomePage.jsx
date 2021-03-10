@@ -64,6 +64,7 @@ function HomePage () {
 
   return (
     <section className='main' style={{ backgroundImage: `url(${Stars})` }}>
+      <img style={{ display: 'none' }} src={Stars} />
       <h1 ref={titleRef} className='main__title'>Friendly crypto money is coming</h1>
 
       <div className='images'>
