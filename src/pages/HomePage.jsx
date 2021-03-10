@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import Rellax from 'rellax'
 import Stars from '@/assets/images/stars.png'
 import Star from '@/assets/images/space-star.png'
@@ -9,29 +9,11 @@ import Apple from '@/assets/images/apple.png'
 import Google from '@/assets/images/google.png'
 import { ReactComponent as FooterLogo } from '@/assets/images/fuse_logo.svg'
 import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_colored.svg'
-import SignUpForm from '@/components/SignUp'
-import { isMobile } from 'react-device-detect'
+import loadable from '@loadable/component'
+const SignUpForm = loadable(() => import('@/components/SignUp'))
+const HoverIcon = loadable(() => import('@/components/HoverIcon'))
 
-const HoverIcon = ({ Icon, Hover, href }) => {
-  const [isHover, setHover] = useState(false)
-  return (
-    <a
-      onMouseEnter={() => {
-        setHover(true)
-      }}
-      onMouseLeave={() => {
-        setHover(false)
-      }}
-      rel='noreferrer noopener'
-      target='_blank'
-      href={href}
-    >
-      {isHover ? <Hover /> : <Icon />}
-    </a>
-  )
-}
-
-function HomePage() {
+function HomePage () {
   const starRef = useRef()
   const moonRef = useRef()
   const phoneRef = useRef()
@@ -49,7 +31,7 @@ function HomePage() {
 
   useEffect(() => {
     const rellax = new Rellax(starRef.current, {
-      speed: isMobile ? -2 : -5,
+      speed: -3,
       center: true,
       round: true
     })
