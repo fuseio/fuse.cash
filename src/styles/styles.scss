@@ -136,6 +136,8 @@
       }
 
       @include block(input) {
+        max-width: 300px;
+        min-width: 300px;
         background-color: black;
         border: 1px solid white;
         height: 50px;
