@@ -10,7 +10,6 @@ import Google from '@/assets/images/google.png'
 import { ReactComponent as FooterLogo } from '@/assets/images/fuse_logo.svg'
 import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_colored.svg'
 import loadable from '@loadable/component'
-const SignUpForm = loadable(() => import('@/components/SignUp'))
 const HoverIcon = loadable(() => import('@/components/HoverIcon'))
 
 function HomePage () {
@@ -75,7 +74,7 @@ function HomePage () {
 
       <div className='use_your'>
         Use your crypto money everyday to buy, swap and save.  All without fees.  You know... like <span>cash.</span>
-        <div className='title'>Coming soon</div>
+        <div className='title'>Download the wallet</div>
         <div className='apps'>
           <img src={Apple} />
           <img src={Google} />
@@ -85,7 +84,9 @@ function HomePage () {
       <div className='image__wrapper'>
         <div className='coming_soon__wrapper'>
           <div className='coming_soon'>
-            <SignUpForm />
+            <div className='sign_up'>
+              <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='title'>Join for Beta testing group</a>
+            </div>
           </div>
         </div>
         <div className='image'>
@@ -103,6 +104,9 @@ function HomePage () {
             <span>Powered by fuse.io</span>
           </div>
         </div>
+      </div>
+      <div className='contacts_us'>
+        Contact us: <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io'> hello@fuse.io</a>
       </div>
     </section>
   )

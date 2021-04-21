@@ -59,6 +59,12 @@
       @include flex-align(center, middle);
       @include breakpoint(medium up) {
         @include xy-grid();
+
+        img {
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
       }
       img {
         width: 150px;
@@ -203,5 +209,16 @@
   }
   @include block(land) {
     margin-bottom: auto;
+  }
+
+  @include block(contacts_us) {
+    height: 55px;
+    @include xy-grid();
+    @include flex-align(center, middle);
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1em;
+    font-family: "GTWalsheimPro-Medium";
   }
 }
