@@ -114,66 +114,6 @@
     }
   }
 
-  @include block(coming_soon) {
-    z-index: 5;
-    @include xy-grid(vertical);
-    @include flex-align(center, middle);
-    @include breakpoint(medium up) {
-      position: relative;
-      left: -50%;
-    }
-
-    @include element(wrapper) {
-      @include breakpoint(medium up) {
-        position: absolute;
-        left: 50%;
-        top: -46px;
-      }
-    }
-
-    @include block(sign_up) {
-      padding-top: 3em;
-      @include xy-grid(vertical);
-      @include flex-align(center, middle);
-      @include block(title) {
-        font-size: 1.7em;
-        font-weight: bold;
-        color: white;
-      }
-
-      @include block(input) {
-        max-width: 300px;
-        min-width: 300px;
-        background-color: black;
-        border: 1px solid white;
-        height: 50px;
-        border-radius: 4px;
-        width: 110%;
-        color: white;
-        padding-left: 15px;
-        font-size: 1.5em;
-        margin: 1em 0;
-        @include breakpoint(medium down) {
-          width: 90%;
-        }
-
-        &::-webkit-input-placeholder {
-          color: white;
-        }
-      }
-
-      @include block(button) {
-        margin-top: 0.4em;
-        font-size: 20px;
-        background-color: #47cd8a;
-        border-radius: 4px;
-        font-weight: 500;
-        height: 50px;
-        padding: 0 1em;
-      }
-    }
-  }
-
   @include block(image) {
     position: relative;
 
@@ -205,6 +145,16 @@
 
     @include element(wrapper) {
       position: relative;
+
+      @include block(button) {
+        background-color: #47cd8a;
+        font-family: "GTWalsheimPro-Medium";
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 1.7em;
+        padding: 10px;
+      }
     }
   }
   @include block(land) {

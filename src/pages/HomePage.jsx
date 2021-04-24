@@ -82,12 +82,10 @@ function HomePage () {
       </div>
 
       <div className='image__wrapper'>
-        <div className='coming_soon__wrapper'>
-          <div className='coming_soon'>
-            <div className='sign_up'>
-              <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='title'>Join for Beta testing group</a>
-            </div>
-          </div>
+        <div className='grid-x align-center align-middle'>
+          <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-18 medium-12 button'>
+            <button>Join for Beta testing group!</button>
+          </a>
         </div>
         <div className='image'>
           <img className='land' src={Land} alt='land' />
