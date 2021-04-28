@@ -17,6 +17,46 @@
   margin: 0 auto;
 }
 
+@include block(privacy) {
+  @include xy-grid-container(1000px);
+  padding: 5em;
+
+  @include breakpoint(small down) {
+    padding: 2em;
+  }
+  background: white;
+
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 1em 0px;
+  }
+
+  h5 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em 0px;
+  }
+
+  p {
+    display: block;
+    margin: 1em 0px;
+  }
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0px;
+    padding-inline-start: 40px;
+  }
+}
+
 @include block(main) {
   background-repeat: no-repeat;
   background-size: cover;
