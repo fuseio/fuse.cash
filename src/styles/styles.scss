@@ -20,6 +20,10 @@
 @include block(privacy) {
   @include xy-grid-container(1000px);
   padding: 5em;
+
+  @include breakpoint(small down) {
+    padding: 2em;
+  }
   background: white;
 
   h1 {
