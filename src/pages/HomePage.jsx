@@ -93,7 +93,7 @@ function HomePage () {
       <div className='image__wrapper'>
         <div className='grid-x align-center align-middle'>
           <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-28 medium-12 button'>
-            <button>Join for fuse.cash group!</button>
+            <button>Join to fuse.cash group!</button>
           </a>
         </div>
         <div className='image'>
