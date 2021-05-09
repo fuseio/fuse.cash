@@ -147,7 +147,7 @@
     }
 
     @include block(phone) {
-      width: 350px;
+      width: 450px;
       @include breakpoint(small down) {
         width: 250px;
       }
@@ -197,18 +197,28 @@
       }
     }
   }
+
   @include block(land) {
     margin-bottom: auto;
   }
 
   @include block(contacts_us) {
     height: 55px;
-    @include xy-grid();
-    @include flex-align(center, middle);
+    padding: 1em;
     background-color: black;
     color: white;
     width: 100%;
     font-size: 1em;
     font-family: "GTWalsheimPro-Medium";
+
+    @include block(icons) {
+      @include xy-grid();
+
+      > a {
+        > svg {
+          width: 30px;
+        }
+      }
+    }
   }
 }
