@@ -7,6 +7,11 @@ import Phone from '@/assets/images/iphone.png'
 import Land from '@/assets/images/land.png'
 import Apple from '@/assets/images/apple.png'
 import Google from '@/assets/images/google.png'
+import { ReactComponent as Discord } from '@/assets/images/discord.svg'
+import { ReactComponent as Github } from '@/assets/images/github.svg'
+import { ReactComponent as Medium } from '@/assets/images/medium.svg'
+import { ReactComponent as Telegram } from '@/assets/images/telegram.svg'
+import { ReactComponent as Twitter } from '@/assets/images/twitter.svg'
 import { ReactComponent as FooterLogo } from '@/assets/images/fuse_logo.svg'
 import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_colored.svg'
 import loadable from '@loadable/component'
@@ -76,15 +81,19 @@ function HomePage () {
         Use your crypto money everyday to buy, swap and save.  All without fees.  You know... like <span>cash.</span>
         <div className='title'>Download the wallet</div>
         <div className='apps'>
-          <img src={Apple} />
-          <img src={Google} />
+          <a rel='noreferrer noopener' target='_blank' href='https://apps.apple.com/us/app/fuse-cash/id1559937899'>
+            <img src={Apple} />
+          </a>
+          <a rel='noreferrer noopener' target='_blank' href='https://play.google.com/store/apps/details?id=io.fuse.cash'>
+            <img src={Google} />
+          </a>
         </div>
       </div>
 
       <div className='image__wrapper'>
         <div className='grid-x align-center align-middle'>
-          <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-18 medium-12 button'>
-            <button>Join for Beta testing group!</button>
+          <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-28 medium-12 button'>
+            <button>Join for fuse.cash group!</button>
           </a>
         </div>
         <div className='image'>
@@ -103,8 +112,52 @@ function HomePage () {
           </div>
         </div>
       </div>
-      <div className='contacts_us'>
-        Contact us: <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io'> hello@fuse.io</a>
+      <div className='contacts_us grid-x align-middle align-justify'>
+        <div className='icons cell medium-12 grid-x align-middle grid-margin-x grid-margin-y'>
+          <a
+            rel='noreferrer noopener'
+            className='cell small-2 grid-x align-center align-middle'
+            target='_blank'
+            href='https://twitter.com/fuse_network'
+          >
+            <Twitter />
+          </a>
+          <a
+            rel='noreferrer noopener'
+            className='cell small-2 grid-x align-center align-middle'
+            target='_blank'
+            href='https://github.com/fuseio'
+          >
+            <Github />
+          </a>
+          <a
+            rel='noreferrer noopener'
+            className='cell small-2  grid-x align-center align-middle'
+            target='_blank'
+            href='https://discordapp.com/invite/jpPMeSZ'
+          >
+            <Discord />
+          </a>
+          <a
+            rel='noreferrer noopener'
+            className='cell small-2  grid-x align-center align-middle'
+            target='_blank'
+            href='https://medium.com/fusenet'
+          >
+            <Medium />
+          </a>
+          <a
+            rel='noreferrer noopener'
+            className='cell small-2  grid-x align-center align-middle'
+            target='_blank'
+            href='https://t.me/fuseio'
+          >
+            <Telegram />
+          </a>
+        </div>
+        <div className='cell shrink'>
+          Contact us: <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io'> hello@fuse.io</a>
+        </div>
       </div>
     </section>
   )
