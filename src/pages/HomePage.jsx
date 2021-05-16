@@ -17,7 +17,7 @@ import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_c
 import loadable from '@loadable/component'
 const HoverIcon = loadable(() => import('@/components/HoverIcon'))
 
-function HomePage () {
+function HomePage() {
   const starRef = useRef()
   const moonRef = useRef()
   const phoneRef = useRef()
@@ -92,8 +92,9 @@ function HomePage () {
 
       <div className='image__wrapper'>
         <div className='grid-x align-center align-middle'>
-          <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-28 medium-12 button'>
-            <button>Join to fuse.cash group!</button>
+          <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-28 medium-12 button grid-x align-center'>
+            <Telegram />
+            <button>Join fuse.cash group!</button>
           </a>
         </div>
         <div className='image'>
