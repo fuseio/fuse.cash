@@ -147,7 +147,7 @@
     }
 
     @include block(phone) {
-      width: 450px;
+      width: 600px;
       @include breakpoint(small down) {
         width: 250px;
       }

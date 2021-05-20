@@ -6,7 +6,7 @@ function PrivacyPolicy () {
 
       <h1>fuse.cash privacy policy</h1>
 
-      <p>fuse.cash is a mobile application wallet service for the Fuse Network (the “Network”) distributed by Fuse network Ltd (“Fuse Network” or “we” or “us” or “our”) which allows users to broadcast messages & transactions and view addresses & information that are part of the Network (the “App” or “fuse.cash”). This Privacy Policy (“Privacy Policy”) helps explain how we collect, use, store, and protect your information when you use the App, our developer software, or our website at fuse.io (collectively the “Services”).</p>
+      <p>fuse.cash is a mobile application wallet service for the Fuse Network (the “Network”) distributed by Fuse network Limited, Gibraltar (“Fuse Network” or “we” or “us” or “our”) which allows users to broadcast messages & transactions and view addresses & information that are part of the Network (the “App” or “fuse.cash”). This Privacy Policy (“Privacy Policy”) helps explain how we collect, use, store, and protect your information when you use the App, our developer software, or our website at fuse.io (collectively the “Services”).</p>
 
       <h3>Information We Collect</h3>
       <p>
