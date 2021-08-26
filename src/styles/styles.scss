@@ -57,173 +57,35 @@
   }
 }
 
-@include block(main) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-
-  padding-top: 25em;
+@include block(pending) {
+  background: #38D989;
+  height: 100vh;
   @include xy-grid(vertical);
   @include flex-align(center, middle);
-  @include xy-grid-container();
+  @include xy-grid-container(100%);
 
-  @include element(title) {
-    font-size: 3.125em;
-    font-weight: bold;
-    color: #47cd8a;
-    font-family: "GTWalsheimPro-Bold";
-    text-align: center;
-    padding-bottom: 10em;
-    @include breakpoint(small down) {
-      font-size: 1.725em;
-    }
+  @include element(logo) {
+    margin-bottom: 56rem;
   }
 
-  @include block(use_your) {
-    font-size: 3.125em;
-    font-family: "GTWalsheimPro-Medium";
-    color: white;
+  @include element(typography) {
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
-    padding-bottom: 10em;
-    margin-top: 15em;
-
-    @include block(title) {
-      font-family: "GTWalsheimPro-Bold";
-      font-size: 24px;
-      font-weight: 500;
-      color: white;
-      padding: 2em 0 0.4em;
-    }
-
-    @include block(apps) {
-      @include flex-align(center, middle);
-      @include breakpoint(medium up) {
-        @include xy-grid();
-
-        img {
-          &:first-child {
-            margin-right: 10px;
-          }
-        }
-      }
-      img {
-        width: 150px;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    padding: 0 30rem;
+    p {
+      margin-bottom: 50rem;
+      &:last-child {
+        font-size: 20px;
       }
     }
-    @include breakpoint(small down) {
-      font-size: 1.725em;
-    }
-    > span {
-      color: #47cd8a;
-      font-family: "GTWalsheimPro-Bold";
+    span {
       font-weight: bold;
-      font-style: italic;
-    }
-    @include breakpoint(medium down) {
-      padding-bottom: 5em;
-      max-width: 90%;
-    }
-    @include breakpoint(large up) {
-      width: 608px;
-    }
-  }
-
-  @include block(images) {
-    @include xy-grid(vertical);
-    @include flex-align(center, middle);
-
-    @include block(star) {
-      width: 180px;
-      @include breakpoint(small down) {
-        width: 130px;
-      }
-    }
-
-    @include block(moon) {
-      width: 530px;
-      @include breakpoint(small down) {
-        width: 80%;
-      }
-    }
-
-    @include block(phone) {
-      width: 600px;
-      @include breakpoint(small down) {
-        width: 250px;
-      }
-    }
-  }
-
-  @include block(image) {
-    position: relative;
-
-    @include block(logo) {
-      @include element(wrapper) {
-        @include breakpoint(medium down) {
-          background: black;
-          padding: 1.4em;
-        }
-        @include breakpoint(medium up) {
-          padding: 0.4em;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-        }
-
-        svg {
-          // width: 70px;
-          height: 25px;
-          // max-width: 70px;
-          padding-bottom: 0.4em;
-        }
-        span {
-          font-weight: bold;
-          color: white;
-        }
-      }
-    }
-
-    @include element(wrapper) {
-      position: relative;
-
-      @include block(button) {
-        background-color: #47cd8a;
-        font-family: "GTWalsheimPro-Medium";
-        color: black;
-        text-align: center;
-        border-radius: 10px;
-        font-size: 1.7em;
-        padding: 10px;
-
-        svg {
-          width: 25px;
-          margin-right: .5em;
-        }
-      }
-    }
-  }
-
-  @include block(land) {
-    margin-bottom: auto;
-  }
-
-  @include block(contacts_us) {
-    height: 55px;
-    padding: 1em;
-    background-color: black;
-    color: white;
-    width: 100%;
-    font-size: 1em;
-    font-family: "GTWalsheimPro-Medium";
-
-    @include block(icons) {
-      @include xy-grid();
-
-      > a {
-        > svg {
-          width: 30px;
-        }
-      }
+      font-style: normal;
     }
   }
 }
