@@ -18,6 +18,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: '[name].[hash].js'
   },
   module: {
@@ -34,7 +35,7 @@ module.exports = {
             ? {
                 loader: MiniCssExtractPlugin.loader,
                 options: {
-                  publicPath: './'
+                  publicPath: '/'
                 }
               }
             : {
@@ -43,6 +44,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              url: false,
               sourceMap
             }
           },
@@ -68,31 +70,29 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g)$/i,
-        exclude: /fonts/,
+        exclude: [/fonts/],
         use: [
           {
             loader: 'file-loader',
             options: {
               outputPath: 'images',
               name: '[name].[ext]',
-              publicPath: './images'
+              publicPath: '/images'
             }
           },
           {
             loader: 'image-webpack-loader',
             options: {
+              disable: true,
+              bypassOnDebug: true,
               gifsicle: {
                 interlaced: false
               },
               optipng: {
-                optimizationLevel: 3
+                optimizationLevel: 7
               },
               pngquant: {
-                quality: [0.65, 0.90],
                 speed: 4
-              },
-              webp: {
-                quality: 75
               },
               mozjpeg: {
                 progressive: true
@@ -103,7 +103,17 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack', 'file-loader']
+        use: [
+          {
+            loader: '@svgr/webpack'
+          },
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '/'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -123,7 +133,9 @@ module.exports = {
   resolve: {
     extensions: [
       '.js',
-      '.jsx'
+      '.jsx',
+      '.png',
+      '.svg'
     ],
     alias: {
       'react-dom': '@hot-loader/react-dom',
@@ -159,17 +171,18 @@ module.exports = {
         }
       }
     }),
-    new HtmlWebpackPlugin({
-      appMountId: 'app',
-      filename: 'index.html',
-      template: path.join(__dirname, 'src', 'index.html')
-    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
     }),
     new MiniCssExtractPlugin(),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      appMountId: 'app',
+      filename: 'index.html',
+      template: path.join(__dirname, 'src', 'index.html'),
+      publicPath: '/'
+    })
   ],
   optimization: {
     runtimeChunk: 'single',
