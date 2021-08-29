@@ -17,7 +17,7 @@ import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_c
 import loadable from '@loadable/component'
 const HoverIcon = loadable(() => import('@/components/HoverIcon'))
 
-function HomePage() {
+function HomePage () {
   const starRef = useRef()
   const moonRef = useRef()
   const phoneRef = useRef()

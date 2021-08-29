@@ -1,13 +1,11 @@
-import React, { useRef, useEffect } from 'react';
-import { ReactComponent as Logo } from '@/assets/images/fuse_cash_logo.svg';
+import React from 'react'
+import { ReactComponent as Logo } from '@/assets/images/fuse_cash_logo.svg'
 
-
-function HomePage() {
-
+function PendingTransaction () {
   return (
     <section className='pending'>
       <div className='pending__logo'><Logo /></div>
-      <div className="pending__typography">
+      <div className='pending__typography'>
         <p>
           <span>Your transactions is pending</span><br />
           It might take a few hours to be approve by Ramp
@@ -20,4 +18,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default PendingTransaction

@@ -32,7 +32,6 @@ function PrivacyPolicy () {
         </li>
       </ul>
 
-
       <h5>
         Automatically collected information
       </h5>
