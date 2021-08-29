@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g)$/i,
-        exclude: [/fonts/],
+        exclude: /fonts/,
         use: [
           {
             loader: 'file-loader',
