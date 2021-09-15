@@ -1,141 +1,128 @@
 import React from 'react'
 
-function PrivacyPolicy () {
+function PrivacyPolicy() {
   return (
     <div className='privacy'>
 
-      <h1>fuse.cash privacy policy</h1>
 
-      <p>fuse.cash is a mobile application wallet service for the Fuse Network (the “Network”) distributed by Fuse network Limited, Gibraltar (“Fuse Network” or “we” or “us” or “our”) which allows users to broadcast messages & transactions and view addresses & information that are part of the Network (the “App” or “fuse.cash”). This Privacy Policy (“Privacy Policy”) helps explain how we collect, use, store, and protect your information when you use the App, our developer software, or our website at fuse.io (collectively the “Services”).</p>
+      <h3>Who we are</h3>
 
-      <h3>Information We Collect</h3>
-      <p>
-        We receive or collect information when we operate and provide our Services, including when you install, access, or use our Services.
-      </p>
+      <p>This Privacy Policy applies to all of the personal data we collect about you, including information collected on https://fuse.io and any other websites (including mobile access) where this policy is linked to; all of which are referred to as the “Site” in this policy.</p>
 
-      <h5>
-        Information you provide
-      </h5>
+      <p>Your privacy matters to us, so please do take the time to get to know our practices and, if you have any questions, contact us using our contact details below. This Privacy Policy was last updated on September 10th, 2021 and applies from that date.</p>
 
-      <ul>
-        <li>
-          <b>Your Account Information</b> - In order to create a fuse.cash account, you will provide us with a username and Phone number. You may also voluntarily add other information, such as a profile name, profile picture, biography,or location.
-        </li>
-        <li>
-          <b>Your Messages and Contacts</b> - We do not retain your messages or your list of contacts in the ordinary course of providing our Services to you. Once your chat messages (including any text, photos, videos, voice messages, files, and share location information that may be attached to them) are delivered, they are deleted from our servers. Your messages and contacts are stored on your own device. If a message cannot be delivered immediately (for example, if you are offline), we may keep it on our servers until you are back online and the message is delivered. All messages sent through the Services are encrypted end-to-end, so even if we temporarily store them on our servers, neither we nor any third parties can read them. However, we may retain high level, anonymized message metrics and metadata (for example the total number of messages sent using the Services during a given month or year).
-        </li>
-        <li>
-          <b>Your Transactions</b> - Your network private key, which you utilize to access your funds and initiate transactions on different networks, is stored only on your own device. However, to facilitate your transactions and provide you with your respective network account balance, we store the network public key address associated with your Network.
-        </li>
-        <li>
-          <b>Customer Support</b> - We may collect additional information you may disclose to our customer support team.
-        </li>
-      </ul>
+      <p>We may occasionally amend this Privacy Policy. Any new policy will automatically be effective when it is published on the website. You should, therefore, return here regularly to view our most up to date Privacy Policy. You should also print a copy for your records.</p>
 
-      <h5>
-        Automatically collected information
-      </h5>
+      <p>We do not knowingly collect or process data from anyone under the age of thirteen (13) years old.</p>
+
+      <p>This Website referred to in this document as a “Website” or “Service”, is owned and operated by Fuse Network Limited (“Fuse Network Limited Ltd”). Fuse Network Limited is incorporated in Gibraltar (Fuse Network Limited, Madison Building, Midtown,</p>
+      Queensway, GX11 1AA, Gibraltar. Registered in Gibraltar - Company No. 120072.). We refer to Fuse Network Limited, as “we”, “us” or “our” in this Privacy Policy.
+
+      <h3>What information do we collect?</h3>
+
+      <p>Most of the information we collect is information provided directly by you, which is set out on the web page on which we collect it – for example in our newsletter form. This may include:</p>
+
+      <p>Contact information – information such as name, job title, company name, department, email address, physical mailing address, device identity number (such as a device Uniform Resource Identifier or URL) and telephone number;</p>
+
+      <p>We may also collect and process other information obtained through our Site or the device you are using, including:</p>
 
       <ul>
-        <li>
-          <b>Metrics and Performance Data</b> - We may collect service-related, diagnostic, and performance information. This includes high level information about your activity (such as how you use our Services and how you interact with others using our Services), and diagnostic, crash, website, and performance logs and reports.
-        </li>
-        <li>
-          <b>Device and Connection Information</b> - We may collect device-specific information when you install, access, or use our Services. This may include your IP address and, if you choose to allow push notifications through fuse.cash, your device’s unique push token.
-        </li>
-        <li>
-          <b>Status Information</b> - We may collect information about your online status on our Services, such as when you last used our Services (your “last seen status”).
-        </li>
+        <li>Customer Login information, including end-user data, user ID and login password;</li>
+        <li>Location information (including GPS signals sent by a mobile device, location information gathered from social media networks or sensor or IP address data from your device);</li>
+        <li>User-generated content, for example, audio data, video data, instant messaging data, content generated during call recording and data processed for troubleshooting purposes.</li>
+        <li>Embedded content from other websites Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website. These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</li>
+        <li>Information from cookies, web beacons or from the internet, including your IP address, browser type, operating system, domain name, access times, which pages you visit within our website and referring website addresses. Cookies are small pieces of information that are stored by your browser on your computer’s hard drive.</li>
       </ul>
 
-      <h3>How We Use The Information We Collect</h3>
+      <h3>What are Cookies?</h3>
 
-      <p>Our primary purpose in collecting information is to to help us operate, provide, improve, customize, support, and market our Services. We may use your information to:</p>
+      <p>Cookies are small pieces of information that are stored by your browser on your computer’s hard drive So if you leave a comment on our site you may opt-in to save your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year. If you have an account and you log in to this site, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser. When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select “Remember Me”, your login will persist for two weeks. If you log out of your account, the login cookies will be removed. If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>
+
+      <h3>How do we use your information?</h3>
+
+      <p>Our primary purpose in collecting your personal data is to provide you with the services you requested and those which we believe will optimise your use of the Site. We may use your personal data for the following purposes:</p>
+
       <ul>
-        <li>
-          Provide the Services and customer support you request;
-        </li>
-        <li>
-          Verify your account;
-        </li>
-        <li>
-          Resolve disputes and troubleshoot problems;
-        </li>
-        <li>
-          Prevent and investigate potentially prohibited or illegal activities, and/or violations of our posted Terms;
-        </li>
-        <li>
-          Customize, measure, and improve the Services and the content and layout of our application; and
-        </li>
-        <li>
-          Deliver targeted marketing and service update notices based on your communications preferences.
-          We will not use your information for purposes other than those purposes we have disclosed to you, without your permission.
-        </li>
+        <li>To provide the information, services or support you request and related after-sales services;</li>
+        <li>To identify you, and to contact you from time to time with product or service updates;</li>
+        <li>To send other messages that help personalise our products and to make recommendations;</li>
+        <li>To manage our relationship with you and to carry out any related administration;</li>
+        <li>To promote our services, or the services of our suppliers, including by email and via social media platforms (subject to the relevant marketing permissions)*;</li>
+        <li>To detect, investigate and prevent activity we think may be potentially illegal, unlawful or harmful and to enforce our Privacy Policy and/or our Terms or any other purpose referenced herein or therein*;</li>
+        <li>To carry out research, including market research, statistical research on site traffic, sales and other commercial information to assist us in improving the services we provide to you and tailor the Site*;</li>
+        <li>To allow us to troubleshoot the services we provide.</li>
       </ul>
 
-      <h3>Marketing</h3>
+      <h3>Who may use your information?</h3>
 
-      <p>We will never sell or rent your information to third parties.</p>
-      <p>Any communications we send to you will either be related to your account or will be related to the Services. In the event we send any communication to you which is not related specifically to your account, we will provide you with an “unsubscribe” mechanism through which you may opt out of receiving other similar messages in the future.</p>
-      <p>We do not allow third-party banner ads on fuse.cash, but if we ever do, we will update this policy.</p>
-
-      <h3>How Your Information Is Shared With Other fuse.cash Users</h3>
-
-      <p>If you use your account to send a message to or engage in a transaction with another user, that user will have access to your message content or transaction information, respectively. Users with whom you interact with may store or re-share your information with others, on or off of our Services. We, however, will never have access to your underlying messages or store your transaction information.</p>
-
-      <h3>How We Share Information With Third Parties</h3>
-      <p>
-        We work with third-party providers to help us operate, provide, improve, customize, support, and market our Services. For example, we work with companies to distribute our apps, provide our infrastructure, delivery, and other systems. These providers may provide us information about you in certain circumstances; for example, app stores may provide us reports to help us diagnose and fix service issues.
-      </p>
-      <p>We may also share information with law enforcement, government officials, or other third parties when:</p>
       <ul>
-        <li>We are compelled to do so by a subpoena, court order, or similar legal procedure; or</li>
-        <li>
-          We believe in good faith that the disclosure of personal information is necessary to prevent physical harm or financial loss, to report suspected illegal activity or to investigate violations of our Terms.
-        </li>
+        <li>We may disclose your personal data to enforce our policies, to comply with our legal obligations or in the interests of security, public interest or law enforcement in any country where we have entities or affiliates. For example, we may respond to a request by a law enforcement agency or regulatory or governmental authority. We may also disclose data in connection with actual or proposed litigation, or to protect our property, security, people and other rights or interests.</li>
+        <li>We share your information with third parties who help deliver our products and services to you. Examples include hosting our web servers, analysing data, providing marketing assistance, and providing customer service. These companies will have access to your personal information as necessary to perform their functions, but they may not use that data for any other purpose.</li>
+        <li>You may have accessed our website through a hyperlink from the website of one of our subsidiaries or trading partners. If so, you consent to your personal details and purchase information, including behavioural patterns, being shared with that trading partner in accordance with our contractual relationship with them.</li>
+        <li>Please remember that when you share information publicly on any Fuse Network Limited website, for example, a comment on a blog post, it may be indexable by search engines, including Google, which may mean that the information is made public.</li>
       </ul>
 
-      <p>
-        Finally, we may share information with companies or other entities that we plan to merge with or be acquired by. Should such a combination occur, we will require that the new combined entity follow this Privacy Policy with respect to your personal information. You will receive prior notice of any change in applicable policy.
-      </p>
+      <h3>Third party links and services</h3>
 
-      <h3>How we use Cookies</h3>
-
-      <p>When you access our Services, we may place small data files called cookies or pixel tags on your computer or mobile device.</p>
-      <p>We use these files to understand, secure, operate, and provide our Services. For example, we use cookies to:</p>
       <ul>
-        <li>Provide all web-based Services, improve your experience, and understand how our Services are being used;</li>
-        <li>Measure the effectiveness of our promotions; and</li>
-        <li>Remember your choices and customize our Services for you</li>
+        <li>The Site may contain links to third parties’ websites. We are not responsible for the privacy practices or the content of those websites. Therefore, please read carefully any privacy policies on those links or websites before either agreeing to their terms or using those websites.</li>
+        <li>We also use Google Analytics to gather statistics on site usage. This may involve the use of cookies. There are more details in Google’s own privacy policy. Google may aggregate data they collect from their various services including Google Analytics, Google Translate, Google Maps and YouTube. You acknowledge and accept that we have no control over Google’s data collection. You should look at Google’s privacy policy for details of their data collection practices.</li>
+        <li>If you have asked us to share data with third party sites (such as social media sites), their servers may not be secure.</li>
+        <li>Note that, despite the measures taken by us and the third parties we engage, the internet is not secure. As a result, others may unlawfully intercept or access private transmissions or data.</li>
       </ul>
 
-      <p>You can follow the instructions provided by your browser or device (usually located under “Settings” or “Preferences”) to modify your cookie or pixel data settings. Please note that if you set your browser or device to disable cookies, certain of our Services may not function properly.</p>
+      <h3>How do we protect your information?</h3>
 
-      <h3>How you can access or change your information</h3>
-      <p>
-        If you would like to manage, change, limit, or delete your information, you may do so by logging into fuse.cash and tapping the Settings icon. You can change your profile name, profile picture, biography, and location information any time. You can also manage your contacts by tapping the Contacts icon.
-      </p>
+      <p>We take what we consider to be appropriate technical and organisational measures designed to guard against unauthorised or unlawful processing of your personal data and against accidental loss or destruction of, or damage to, your personal data. While no system is completely secure, we believe the measures implemented by Fuse Network Limited reduce our vulnerability to security problems to a level appropriate to the type of data involved. We have security measures in place designed to protect our user database and access to this database is restricted internally. However, it remains your responsibility where you have a client account for the Site:</p>
 
-      <p>You may delete your fuse.cash account at any time. When you delete your account, your undelivered messages are deleted from our servers as well as any of your other information we no longer need to operate and provide our Services. Please remember that when you delete your account, it does not affect the information other users have relating to you, such as their copy of the messages you sent them. Please also note that fuse.cash does not ever store your Network private key, so if you delete the application, make sure you have a copy of your private key elsewhere so that you may continue to access your Network funds. We do provide a feature within the App that will display your locally stored private key stored to you in readable form so that you may write it down and keep a copy of the key off of your device.</p>
-      <h3>Our Global Operations</h3>
-      <p>
-        You agree to our information practices, including the collection, use, processing, and sharing of your information as described in this Privacy Policy, as well as the transfer and processing of your information to the United States and other countries globally where we have or use facilities, service providers, or partners, regardless of where you use our Services.
-      </p>
-      <p>
-        You acknowledge that the laws, regulations, and standards of the country in which your information is stored or processed may be different from those of your own country. However, we require our service providers to treat your information in strict confidence and use appropriate security measures to protect it. We also require them to uphold all obligations under this Privacy Policy.
-      </p>
+      <ul>
+        <li>To keep your password or other access information secret. Your password and login details are personal to you and should not be given to anyone else or used to provide shared access for example over a network. You should use a password which is unique to your use of the Site – do not use the same password as you use for another site or email account; and,</li>
+        <li>To ensure no one else uses your details to log in to the Site while your device is logged on to the Site (including by logging on to your device through a mobile, Wi-Fi or shared access connection you are using);</li>
+        <li>To log off or exit from Site when not using it;</li>
+        <li>To maintain good internet security. For example, if your email account is compromised this could allow access to your account with us if you have given us those details and/or permitted access to those accounts. If your email account is compromised it could be used to ask us to reset a password and gain access to your account with us. You should keep all of your account details secure. If you think that any of your accounts has been compromised you should change your account credentials with us, and in particular, make sure any compromised account does not allow access to your account with us. You should also tell us as soon as you can so that we can try to help you keep your account secure and if necessary warn anyone else who could be affected.</li>
+      </ul>
 
-      <h3>Updates To Our Policy</h3>
+      <h3>Where is your information processed?</h3>
 
-      <p>
-        We may amend or update our Privacy Policy from time to time. We will notify you of material changes to this policy by updating the last updated date at the top of this page, and we will provide you with explicit notice of material changes as required by law. Your continued use of our Services confirms your acceptance of our Privacy Policy, as amended. If you do not agree to our Privacy Policy, as amended, you must stop using our Services. We recommend that you visit this page frequently to check for changes.
-      </p>
+      <p>We might transfer your personal information to places outside Gibraltar for the purpose of providing you with the service you have requested. If you are in Gibraltar this means that your data may be transferred from Gibraltar to another country and stored there, where we (or our suppliers) might process it.</p>
 
-      <h3>Contact Us</h3>
+      <p>If we transfer your personal data outside your country we will take steps to ensure that your privacy rights continue to be protected in compliance with applicable data protection law and this Privacy Policy.</p>
 
-      <p>
-        If you have any questions about our Privacy Policy, please do not hesitate to contact us at <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io'> hello@fuse.io</a>
-      </p>
+      <p>Specific terms relating to Fuse Network Limited products</p>
+
+      <p>Because of the way in which some of our products work we may need to process additional data, or process in a different way. If we need to, we will link to specific privacy policies relating to those products.</p>
+
+      <h3>Marketing communications</h3>
+
+      <p>If you have given permission, we may contact you by mail, telephone, SMS, text/picture/video message, and email about products, services, promotions and special offers that may be of interest to you. If you prefer not to receive any direct marketing communications from us, you can opt out at any time. See further ‘Your rights’, below.</p>
+
+      <h3>How long do we keep your information?</h3>
+
+      <p>We will retain your personal data only as long as is necessary for the purposes set out in this Privacy Policy, or as is required by applicable law, and then we will delete it.</p>
+
+      <h3>Your rights</h3>
+
+      <p>As explained above, you have the right to opt-out of receiving marketing communications from us. If you wish to exercise your right to unsubscribe from email marketing communications, you can use the link at the bottom of any communications received from us. This will automatically suppress your email address from receiving future email marketing communications from our systems unless you choose to opt back in.</p>
+
+      <p>If you wish to exercise your right to be removed from our telemarketing list, please let the caller know at the time of calling and they will make sure your number is suppressed unless you opt back in.</p>
+
+      <p>In addition, to the extent permitted by the laws of your country, you may have the right to object to the processing of your personal data for direct marketing purposes. If your objection is not to direct marketing in general but to direct marketing by a particular channel e.g. email or telephone, it would help us if you can specify the channel you are objecting to.</p>
+
+      <p>Further, to the extent permitted by the laws of your country, you may also have the right to access, correct, delete, restrict, be forgotten, or object to the processing of, or request data portability of the personal data collected about you subject to some conditions and exceptions. You can find out more about these rights in Gibraltar by reading the General Data Protection Regulation here: https://www.gibraltarlaws.gov.gi/legislations/regulation-eu-2016679-5582.</p>
+
+      <p>We will take all reasonable steps to delete your personal data from our system(s) upon request unless restricted by law. We may keep a copy for as long as is necessary in our opinion, in compliance with applicable laws and regulations. In most cases, we will respond to any of your above-mentioned requests within one month but we reserve the right to verify your identity before dealing with your request.</p>
+
+      <p>Data protection registration</p>
+
+      <p>If you wish to inquire about or rely on any of these rights please send the details of your request by email to our Data Protection Officer Mikhail Nekrasov at mikhail@fuse.io.</p>
+
+      <p>You may also have the right to lodge a complaint with a data protection regulator. Our lead regulator is the Gibraltar Regulatory authority who may be contacted at info@gra.gi or telephone: (+350) 20074636.</p>
+
+      <h3>How do you contact us?</h3>
+
+      <p>If you have any questions about this Privacy Policy, the practices of this Site, or your dealings with this Site, we encourage you to contact us at hello@fuse.io.</p>
+
+
     </div>
   )
 }
