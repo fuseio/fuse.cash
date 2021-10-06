@@ -7886,10 +7886,10 @@ react-fast-compare@^2.0.1:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-ga@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-3.3.0.tgz#c91f407198adcb3b49e2bc5c12b3fe460039b3ca"
-  integrity sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ==
+react-ga4@^1.0.5:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-ga4/-/react-ga4-1.1.1.tgz#3800decc791d858d27ba064d91d2b073ac50b6e7"
+  integrity sha512-x06O0Tg3nVGyBbsU27Px06sOv6u9VLXK4bDYVlMafLgK9pJYHVwhHlvwtR83mJvZRHK5HBkHwI9rdNPWM/vSWw==
 
 react-hot-loader@^4.13.0:
   version "4.13.0"

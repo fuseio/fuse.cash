@@ -1,9 +1,8 @@
 import React from 'react'
 
-function PrivacyPolicy() {
+function PrivacyPolicy () {
   return (
     <div className='privacy'>
-
 
       <h3>Who we are</h3>
 
@@ -121,7 +120,6 @@ function PrivacyPolicy() {
       <h3>How do you contact us?</h3>
 
       <p>If you have any questions about this Privacy Policy, the practices of this Site, or your dealings with this Site, we encourage you to contact us at hello@fuse.io.</p>
-
 
     </div>
   )
