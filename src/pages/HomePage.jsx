@@ -1,12 +1,15 @@
 import React, { useRef, useEffect } from 'react'
 import Rellax from 'rellax'
-import Stars from '@/assets/images/stars.jpg'
-import Star from '@/assets/images/space-star.png'
-import Moon from '@/assets/images/moon.png'
+import Accordion from '../components/Accordion'
+import Stars from '@/assets/images/stars.png'
+import Arrows from '@/assets/images/arrows-down.png'
+
 import Phone from '@/assets/images/iphone.png'
 import Land from '@/assets/images/land.png'
 import Apple from '@/assets/images/apple.png'
 import Google from '@/assets/images/google.png'
+import NavLogo from "@/assets/images/nav-logo.png"
+
 import { ReactComponent as Discord } from '@/assets/images/discord.svg'
 import { ReactComponent as Github } from '@/assets/images/github.svg'
 import { ReactComponent as Medium } from '@/assets/images/medium.svg'
@@ -16,6 +19,29 @@ import { ReactComponent as FooterLogo } from '@/assets/images/fuse_logo.svg'
 import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_colored.svg'
 import loadable from '@loadable/component'
 const HoverIcon = loadable(() => import('@/components/HoverIcon'))
+
+const faqs = [
+  {
+    question: 'What is Fuse Cash?',
+    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+  },
+  {
+    question: 'What is Fuse Dollar?',
+    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+  },
+  {
+    question: 'What is Fuse Network?',
+    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+  },
+  {
+    question: 'Why Fuse Cash better then other wallets?',
+    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+  },
+  {
+    question: 'Where I can read more about Fuse Ecosystem?',
+    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+  },
+];
 
 function HomePage () {
   const starRef = useRef()
@@ -67,100 +93,98 @@ function HomePage () {
   }, [])
 
   return (
+    <>
+    <nav className='nav'>
+    <img src={NavLogo} alt='logo'/>
+    <button className='nav__button'>Download app</button>
+    </nav>
     <section className='main' style={{ backgroundImage: `url(${Stars})` }}>
       <img style={{ display: 'none' }} src={Stars} />
-      <h1 ref={titleRef} className='main__title'>Friendly crypto money has arrived</h1>
-
+      <div className="main__title" ref={titleRef}>
+        <div style={{transform:"rotate(-17deg) translateX(-29px)"}}>
+      <h1>Friendly Crypto</h1>
+      <h2 className="main__subTitle">money has arrived </h2>
+        </div>
+      </div>
       <div className='images'>
-        <img className='star' src={Star} ref={starRef} alt='Star' />
-        <img className='moon' src={Moon} ref={moonRef} alt='Moon' />
+        <img className='star' src={Arrows} ref={starRef} alt='Star' />
         <img className='phone' src={Phone} ref={phoneRef} alt='phone' />
       </div>
+      <button className="download">
+        Download app
+      </button>
 
-      <div className='use_your'>
-        Use your crypto money everyday to buy, swap and save.  All without fees.  You know... like <span>cash.</span>
-        <div className='title'>Download the wallet</div>
-        <div className='apps'>
-          <a rel='noreferrer noopener' target='_blank' href='https://apps.apple.com/us/app/fuse-cash/id1559937899'>
+      <div className="download_store">
+        <a rel='noreferrer noopener' target='_blank' href='https://apps.apple.com/us/app/fuse-cash/id1559937899'>
             <img src={Apple} />
           </a>
           <a rel='noreferrer noopener' target='_blank' href='https://play.google.com/store/apps/details?id=io.fuse.cash'>
             <img src={Google} />
           </a>
-        </div>
+      </div>
+
+      <section className='faq'>
+          <h2 className='faq__title'>FAQ</h2>
+          <div className='faq__accordion'>
+            <Accordion items={faqs} titleKey='question' contentKey='ans' />
+          </div>
+        </section>
+      
+
+      <div className='use_your'>
+        Use your crypto money everyday to buy, swap and save.  All without fees.  You know... like cash.
+      
       </div>
 
       <div className='image__wrapper'>
-        <div className='grid-x align-center align-middle'>
-          <a rel='noreferrer noopener' target='_blank' href='https://t.me/joinchat/-3WQl1LFK_s3ODg9' className='cell small-28 medium-12 button grid-x align-center'>
-            <Telegram />
-            <button>Join fuse.cash group!</button>
-          </a>
-        </div>
         <div className='image'>
           <img className='land' src={Land} alt='land' />
-          <div className='grid-y align-center align-middle logo__wrapper'>
-            <HoverIcon
-              href='https://fuse.io'
-              Icon={() => (
-                <FooterLogo />
-              )}
-              Hover={() => (
-                <FooterLogoColored />
-              )}
-            />
-            <span>Powered by fuse.io</span>
-          </div>
+          
+          <div className='contacts_us grid-x  align-justify'>
+            <div className="logo">
+              <img src={NavLogo}  alt="logo"/>
+              <h2>Contact us: <br/> <span>hello@fuse.io</span></h2>
+            </div>
+      
+            <div className="footer-links">
+              <h3>DApp</h3>
+              <a>Fuse Swap</a>             
+              <a>Fuse Rewards</a>
+              <a>Fuse Staking</a>
+            </div>
+
+            <div className="footer-links">
+              <h3>Social Media</h3>
+              <a>Twitter</a>             
+              <a>GitHub</a>
+              <a>Discord</a>
+              <a>Medium</a>
+              <a>Telegram</a>
+            </div>
+
+            <div className="footer-links">
+              <h3>Support</h3>
+            </div>
+            <div className="footer-last">
+              <div className="footer_input">
+                <input type="text" placeholder="subscriber to our newsletters"/>
+                <button>subscriber</button>
+              </div>
+              <div className="download_store">
+        <a rel='noreferrer noopener' target='_blank' href='https://apps.apple.com/us/app/fuse-cash/id1559937899'>
+            <img src={Apple} />
+          </a>
+          <a rel='noreferrer noopener' target='_blank' href='https://play.google.com/store/apps/details?id=io.fuse.cash'>
+            <img src={Google} />
+          </a>
+      </div>
+            </div>
+      </div>
         </div>
       </div>
-      <div className='contacts_us grid-x align-middle align-justify'>
-        <div className='icons cell medium-12 grid-x align-middle grid-margin-x grid-margin-y'>
-          <a
-            rel='noreferrer noopener'
-            className='cell small-2 grid-x align-center align-middle'
-            target='_blank'
-            href='https://twitter.com/fuse_network'
-          >
-            <Twitter />
-          </a>
-          <a
-            rel='noreferrer noopener'
-            className='cell small-2 grid-x align-center align-middle'
-            target='_blank'
-            href='https://github.com/fuseio'
-          >
-            <Github />
-          </a>
-          <a
-            rel='noreferrer noopener'
-            className='cell small-2  grid-x align-center align-middle'
-            target='_blank'
-            href='https://discordapp.com/invite/jpPMeSZ'
-          >
-            <Discord />
-          </a>
-          <a
-            rel='noreferrer noopener'
-            className='cell small-2  grid-x align-center align-middle'
-            target='_blank'
-            href='https://medium.com/fusenet'
-          >
-            <Medium />
-          </a>
-          <a
-            rel='noreferrer noopener'
-            className='cell small-2  grid-x align-center align-middle'
-            target='_blank'
-            href='https://t.me/fuseio'
-          >
-            <Telegram />
-          </a>
-        </div>
-        <div className='cell shrink'>
-          Contact us: <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io'> hello@fuse.io</a>
-        </div>
-      </div>
+     
     </section>
+    </>
   )
 }
 
