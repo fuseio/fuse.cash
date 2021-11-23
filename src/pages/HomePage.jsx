@@ -9,13 +9,15 @@ import Land from '@/assets/images/land.png'
 import Apple from '@/assets/images/apple.png'
 import Google from '@/assets/images/google.png'
 import NavLogo from "@/assets/images/nav-logo.png"
-
+import FooterLogo from "@/assets/images/footerLogo.png"
+import FirstPlanet from "@/assets/images/planet1.png"
+import SecondPlanet from "@/assets/images/planet2.png"
+import ThirdPlanet from "@/assets/images/planet3.png"
 import { ReactComponent as Discord } from '@/assets/images/discord.svg'
 import { ReactComponent as Github } from '@/assets/images/github.svg'
 import { ReactComponent as Medium } from '@/assets/images/medium.svg'
 import { ReactComponent as Telegram } from '@/assets/images/telegram.svg'
 import { ReactComponent as Twitter } from '@/assets/images/twitter.svg'
-import { ReactComponent as FooterLogo } from '@/assets/images/fuse_logo.svg'
 import { ReactComponent as FooterLogoColored } from '@/assets/images/fuse_logo_colored.svg'
 import loadable from '@loadable/component'
 const HoverIcon = loadable(() => import('@/components/HoverIcon'))
@@ -94,11 +96,15 @@ function HomePage () {
 
   return (
     <>
+
     <nav className='nav'>
     <img src={NavLogo} alt='logo'/>
     <button className='nav__button'>Download app</button>
     </nav>
     <section className='main' style={{ backgroundImage: `url(${Stars})` }}>
+      <img className="main__firstPlanet" src={FirstPlanet} alt="first-planet" />
+      <img className="main__secondPlanet" src={SecondPlanet} alt="second-planet" />
+      <img className="main__thirdPlanet" src={ThirdPlanet} alt="third-planet" style={{position:"absolute", top:"24.9%",left:"0%",height:"600px"}}/>
       <img style={{ display: 'none' }} src={Stars} />
       <div className="main__title" ref={titleRef}>
         <div style={{transform:"rotate(-17deg) translateX(-29px)"}}>
@@ -140,9 +146,9 @@ function HomePage () {
         <div className='image'>
           <img className='land' src={Land} alt='land' />
           
-          <div className='contacts_us grid-x  align-justify'>
+          <div className='footer grid-x  align-justify'>
             <div className="logo">
-              <img src={NavLogo}  alt="logo"/>
+              <img src={FooterLogo}  alt="logo"/>
               <h2>Contact us: <br/> <span>hello@fuse.io</span></h2>
             </div>
       

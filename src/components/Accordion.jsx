@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-
+import ArrowDown from "@/assets/images/arrow-down.png"
 export default function Accordion({ items, titleKey, contentKey }) {
   const [activeIndex, setActiveIndex] = React.useState(null);
 
@@ -27,9 +27,12 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
   const ref = useRef(null);
 
   return (
-    <div className={`accordion__item ${isActive ? 'accordion__item--active' : ''}`}>
-      <div className='accordion__title' onClick={() => onOpen(id)}>
+    <div  onClick={() => onOpen(id)} className={`accordion__item ${isActive ? 'accordion__item--active' : ''}`}>
+      <div  style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
+      <div className='accordion__title'>
         {title}
+      </div>
+      <img src={ArrowDown} alt="arrow-down"  />
       </div>
       <div
         ref={ref}
