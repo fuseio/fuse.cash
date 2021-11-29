@@ -22,9 +22,14 @@
   @include xy-grid(vertical);
   color: #FFFFFF;
   cursor: pointer;
+  @include element(title){
+    font-size: 24rem;
+    font-family: 'Avenir';
+    font-weight: 500;
+  }
   @include element(item) {
     background-color: #3CD49B;
-    padding: 16rem 36rem 6rem 30rem;
+    padding: 6rem 36rem 6rem 36rem;
     border-radius: 10rem;
     margin-bottom: 17rem;
     transition: padding ease 0.3s;
@@ -32,18 +37,10 @@
       background-color: #02532A;
     }
     @include breakpoint(medium down){
-      padding: 16rem 21rem 6rem 21rem;
+      padding: 6rem 21rem 6rem 21rem;
     }
   }
-  @include element(title) {
-    font-size: 24rem;
-    margin-bottom: 10rem;
-    font-family: 'Avenir';
-    font-weight: 500;
-    @include breakpoint(medium down){
-      font-size: 20rem;
-    }
-  }
+  
   @include element(content) {
     overflow: hidden;
     height: 0;
@@ -51,6 +48,7 @@
     font-size: 18rem;
     font-family: 'Avenir';
     font-weight: 500;
+    margin-top: 10px;
   }
 }
 
@@ -113,12 +111,17 @@
 
 @include block(nav){
   min-height: 80px;
-  max-width: 1280px;
+  max-width: 1630px;
   margin: 0 auto;
   padding:0 103px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  margin-bottom: 1px;
+  background-color: black;
   @include breakpoint(medium down){
     padding: 0 30px;
     gap: 20px;
@@ -151,10 +154,9 @@
 
 @include block(main) {
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  padding-top: 25em;
+  // padding-top: 25em;
   position: relative;
+  border-top: 2px solid #47CC8A;
   @include xy-grid(vertical);
   @include flex-align(center, middle);
   @include xy-grid-container();
@@ -188,22 +190,21 @@
     }
 
   @include element(title) {
-    font-size: 3.125em;
-    font-weight: bold;
-    color: white;
-    font-family: "Integral CF";
-    font-weight: 900;
     text-align: center;
-    padding-bottom: 4.8em;
-    text-transform: uppercase;
-    h1{
-      font-size: 57px;
-      @include breakpoint (small down){
-        font-size: 45px;
-      }
+    // padding-bottom: 4.8em;
+    display: flex;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    svg{
+      max-width: 814px;
+      width: 100%;
     }
-    @include breakpoint(small down) {
-      font-size: 1.325em;
+    img {
+      position: absolute;
+      bottom: 61rem;
     }
   }
   @include element(subTitle){
@@ -260,7 +261,7 @@
       max-width: 90%;
     }
     @include breakpoint(large up) {
-      max-width: 958px;
+      max-width:1383px;
     }
   }
 

@@ -28,7 +28,7 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
 
   return (
     <div  onClick={() => onOpen(id)} className={`accordion__item ${isActive ? 'accordion__item--active' : ''}`}>
-      <div  style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
+      <div  style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:"10px",marginBottom:"10px"}}>
       <div className='accordion__title'>
         {title}
       </div>
