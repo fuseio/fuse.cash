@@ -17,11 +17,22 @@
   max-width: 100%;
   margin: 0 auto;
 }
-
+@include block(backdrop){
+  width:100%;
+  height:100%;
+  position: absolute
+}
 @include block(accordion) {
   @include xy-grid(vertical);
   color: #FFFFFF;
   cursor: pointer;
+  @include element(contentContainer){
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   @include element(title){
     font-size: 24rem;
     font-family: 'Avenir';
@@ -185,6 +196,11 @@
       color: #47CC8A;
       text-align: center;
       padding-bottom:23.5px;
+    }
+    @include modifier(open) {
+      visibility: visible;
+      height: 250px;
+      opacity: 100%;
     }
   }
 }
@@ -363,6 +379,11 @@
     }
     svg{
       height: calc(100% - 38px);
+    }
+    @include modifier(open) {
+      visibility: visible;
+      height: 405px;
+      opacity: 100%;
     }
   }
   }

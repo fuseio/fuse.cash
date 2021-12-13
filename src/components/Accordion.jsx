@@ -31,7 +31,7 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
 
   return (
     <div  onClick={() => onOpen(id)} className={`accordion__item ${isActive ? 'accordion__item--active' : ''}`}>
-      <div  style={{display:"flex", justifyContent:"space-between", alignItems:"center", marginTop:"10px",marginBottom:"10px"}}>
+      <div className='accordion__contentContainer'>
       <div className='accordion__title'>
         {title}
       </div>
@@ -43,7 +43,7 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
         className={`accordion__content ${isActive ? 'accordion__content--active' : ''}`}
       >
         {content}
-        {extraAns ? (<div><br/> <br/></div>) :("")}
+        {extraAns ? (<><br/> <br/></>) :("")}
         {extraAns}  
         <br/> 
          <a  href={link} target="_blank">learn more ></a>
