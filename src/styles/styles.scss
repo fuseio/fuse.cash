@@ -49,6 +49,10 @@
     font-family: 'Avenir';
     font-weight: 500;
     margin-top: 10px;
+    a{
+      color: #3CD49B;
+      font-weight: 500;
+    }
   }
 }
 
@@ -122,6 +126,7 @@
   z-index: 9999;
   margin-bottom: 1px;
   background-color: black;
+  border: 1px solid #47CC8A;
   @include breakpoint(medium down){
     padding: 0 30px;
     gap: 20px;
@@ -131,6 +136,11 @@
       max-width: 120px;
     }
   }
+
+  @include element(content){
+    position: relative;
+  }
+
   @include element(button){
     color: white;
     display: flex;
@@ -143,11 +153,38 @@
     height: 50px;
     font-family: 'Avenir 85';
     font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: white;
+      color: #47CC8A;
+      transition: all 0.2s ease-in-out;
+    }
     @include breakpoint(small down){
       width: 210px;
       font-size: 18px;
       height: 45px;
+    }
+  }
+  @include element(popup){
+    position: absolute;
+    background-color: white;
+    top:0;
+    border: 1px solid #47CC8A;
+    border-radius: 10px;
+    width: 238px;
+    padding: 12.5px 50px 47px 50px;
+    height:0;
+    visibility: hidden;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
 
+    h3{
+      font-family: 'Avenir';
+      font-size: 20px;
+      font-weight: 900;
+      color: #47CC8A;
+      text-align: center;
+      padding-bottom:23.5px;
     }
   }
 }
@@ -156,7 +193,7 @@
   background-repeat: no-repeat;
   // padding-top: 25em;
   position: relative;
-  border-top: 2px solid #47CC8A;
+  
   @include xy-grid(vertical);
   @include flex-align(center, middle);
   @include xy-grid-container();
@@ -269,8 +306,9 @@
     @include xy-grid(vertical);
     @include flex-align(center, middle);
 
-    @include block(star) {
-      padding-bottom: 11.875em;
+    @include block(phone) {
+      max-width: 850px;
+      margin-bottom: -135px;
     }
 
     
@@ -291,16 +329,49 @@
     border-radius: 10px;
     background-color: #47CC8A;
     text-align: center;
-    margin-top: 30px;
     z-index: 999;
     font-family: 'Avenir 85';
     font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: white;
+      color: #47CC8A;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  @include block(large_popup){
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    border: 1px solid #47CC8A;
+    border-radius: 10px;
+    width: 365px;
+    padding: 28px 32px 35px 32px;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    h3{
+      font-family: 'Avenir';
+      font-size: 20px;
+      font-weight: 500;
+      color: #47CC8A;
+      text-align: center;
+      padding-top:12px;
+    }
+    svg{
+      height: calc(100% - 38px);
+    }
+  }
   }
 
   @include block (download_store){
     display: flex;
     gap: 12px;
     margin-top: 22px;
+    justify-content: center;
     img{
       width: 143px;
     }
@@ -417,6 +488,28 @@
       }
     }
 
+    @include block(footer-downloadContainer){
+      display: flex;
+      align-items: flex-end;
+      gap:20px;
+      justify-content:space-between
+    }
+    @include block(footer-QR){
+      padding: 15px;
+      background-color: white;
+      border: 1px solid #47CC8A;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include block(download_store-footer){
+    max-width: 200px;
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+    justify-content: center;
+    }
     @include block(footer_input){
       border: 1px solid white;
       display: flex;
@@ -456,7 +549,7 @@
 
   }
   
-}
+
 
 @include block(pending) {
   background: #38d989;

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect,useState } from 'react'
 import Rellax from 'rellax'
 import Accordion from '../components/Accordion'
 import Stars from '@/assets/images/stars.png'
@@ -13,6 +13,8 @@ import FooterLogo from "@/assets/images/footerLogo.png"
 import FirstPlanet from "@/assets/images/planet1.png"
 import SecondPlanet from "@/assets/images/planet2.png"
 import ThirdPlanet from "@/assets/images/planet3.png"
+import QR from "@/assets/images/qr.png"
+import QRCode from 'react-qr-code';
 import { ReactComponent as Discord } from '@/assets/images/discord.svg'
 import { ReactComponent as Github } from '@/assets/images/github.svg'
 import { ReactComponent as Medium } from '@/assets/images/medium.svg'
@@ -25,24 +27,16 @@ const HoverIcon = loadable(() => import('@/components/HoverIcon'))
 const faqs = [
   {
     question: 'What is Fuse Cash?',
-    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+    ans: 'Fuse Cash is a mobile wallet for transacting with crypto assets. Fuse Cash is, in a way, just like some of the mobile wallets you probably interacted with, such as Venmo, ApplePay or Lydia. But instead of enabling you to store, send and receive traditional currencies like USD and EUR, Fuse Cash allows you to do the same with crypto assets, and more.',
+    extraAns: "Fuse Cash runs on the Fuse Network blockchain. The transactions that you make with the Fuse Cash wallet take place on the decentralized Fuse Network blockchain. However, unlike with many other crypto wallets, this does not mean that you will need to pay network fees to send transactions. You will also not need to worry about your public address or that of the person you are sending funds to, blockchain explorers, etc. We have designed Fuse Cash such that unless the blockchain aspect is important for you, you do not need to keep in mind that it is there, underneath.",
+    link: "http://help.fuse.cash/en/articles/5409057-what-is-fuse-cash"
   },
   {
     question: 'What is Fuse Dollar?',
-    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
+    ans: 'FuseDollar (fUSD) is a US Dollar-pegged stablecoin that is minted on the Fuse Network blockchain. It was created to make cryptocurrencies and DeFi simple for everyday people.',
+    link: "http://help.fuse.cash/en/articles/5408565-what-is-fuse-dollar"
   },
-  {
-    question: 'What is Fuse Network?',
-    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
-  },
-  {
-    question: 'Why Fuse Cash better then other wallets?',
-    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
-  },
-  {
-    question: 'Where I can read more about Fuse Ecosystem?',
-    ans: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text',
-  },
+
 ];
 
 function HomePage () {
@@ -50,6 +44,9 @@ function HomePage () {
   const moonRef = useRef()
   const phoneRef = useRef()
   const titleRef = useRef()
+  const [toggleNavPopup,setToggleNavPopup] = useState(false)
+  const [toggleMainPopup,setToggleMainPopup] = useState(false)
+  const [toggleZIndex,settoggleZIndex]= useState(false)
 
   useEffect(() => {
     const rellax = new Rellax(titleRef.current, {
@@ -85,7 +82,7 @@ function HomePage () {
 
   useEffect(() => {
     const rellax = new Rellax(phoneRef.current, {
-      speed: -1,
+      speed: 3,
       center: true,
       round: true
     })
@@ -94,12 +91,34 @@ function HomePage () {
     }
   }, [])
 
+  const handleNavPopup = ()=> {
+    setToggleNavPopup(!toggleNavPopup)
+    settoggleZIndex(true)
+  }
+  const handleMainPopup = ()=> {
+    setToggleMainPopup(!toggleMainPopup)
+    settoggleZIndex(true)
+  }
+  
+  const handleClosePopup =()=>{
+    settoggleZIndex(false)
+    setToggleNavPopup(false)
+    setToggleMainPopup(false)
+  }
+
   return (
     <>
-
+    <div onClick={handleClosePopup} style={{width:"100%", height:"100%", position:"absolute", zIndex: toggleZIndex ? ("99999") : ("0")}}></div>
     <nav className='nav'>
     <img src={NavLogo} alt='logo'/>
-    <button className='nav__button'>Download app</button>
+    <div className='nav__content'>
+      <button onClick={handleNavPopup} className='nav__button'>Download app</button>
+      
+      <div className="nav__popup" style={{visibility: toggleNavPopup? "visible" : "hidden", height:toggleNavPopup ? "250px":"0", opacity:toggleNavPopup ? "100%" : "0"}}>
+        <h3>Scan</h3>
+        <QRCode size="138" value="https://click.fuse.cash/mrxn/7496231e?af_qr=true" />
+      </div>
+    </div>
     </nav>
     <section className='main' style={{ backgroundImage: `url(${Stars})` }}>
       <img className="main__firstPlanet" src={FirstPlanet} alt="first-planet" ref={titleRef}/>
@@ -153,9 +172,20 @@ function HomePage () {
        
         <img className='phone' src={Phone}  alt='phone' />
       </div>
-      <button className="download">
+
+<div >
+
+      <div style={{position:"relative"}}>
+        <div className="large_popup" style={{visibility: toggleMainPopup ? "visible" : "hidden", height: toggleMainPopup ? "405px":"0", opacity: toggleMainPopup ? "100%" : "0"}}>
+         
+        <QRCode size="298" value="https://click.fuse.cash/mrxn/7496231e?af_qr=true" />
+       
+        <h3>Scan Me</h3>
+        </div>
+        <button onClick={handleMainPopup} className="download">
         Download app
-      </button>
+        </button>
+      </div>
 
       <div className="download_store">
         <a rel='noreferrer noopener' target='_blank' href='https://apps.apple.com/us/app/fuse-cash/id1559937899'>
@@ -165,7 +195,7 @@ function HomePage () {
             <img src={Google} />
           </a>
       </div>
-
+      </div>
       <section className='faq'>
           <h2 className='faq__title'>FAQ</h2>
           <div className='faq__accordion'>
@@ -214,14 +244,21 @@ function HomePage () {
                 <input type="text" placeholder="subscriber to our newsletters"/>
                 <button>subscriber</button>
               </div>
-              <div className="download_store">
+            <div className="footer-downloadContainer">
+              <div className='footer-QR'>
+                
+            <QRCode size="100" value="https://click.fuse.cash/mrxn/7496231e?af_qr=true" />
+            </div>
+              <div className="download_store-footer">
+             
         <a rel='noreferrer noopener' target='_blank' href='https://apps.apple.com/us/app/fuse-cash/id1559937899'>
             <img src={Apple} />
           </a>
           <a rel='noreferrer noopener' target='_blank' href='https://play.google.com/store/apps/details?id=io.fuse.cash'>
             <img src={Google} />
           </a>
-      </div>
+           </div>
+           </div>
             </div>
       </div>
         </div>

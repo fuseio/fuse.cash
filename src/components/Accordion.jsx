@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import ArrowDown from "@/assets/images/arrow-down.png"
+import ArrowUp from "@/assets/images/arrow-up.png"
 export default function Accordion({ items, titleKey, contentKey }) {
   const [activeIndex, setActiveIndex] = React.useState(null);
 
@@ -13,6 +14,8 @@ export default function Accordion({ items, titleKey, contentKey }) {
         <AccordionItem
           title={item[titleKey]}
           content={item[contentKey]}
+          link={item.link}
+          extraAns={item.extraAns}
           key={index}
           id={index}
           isActive={index === activeIndex}
@@ -23,7 +26,7 @@ export default function Accordion({ items, titleKey, contentKey }) {
   );
 }
 
-function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadding = 40 }) {
+function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadding = 40, link, extraAns }) {
   const ref = useRef(null);
 
   return (
@@ -32,7 +35,7 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
       <div className='accordion__title'>
         {title}
       </div>
-      <img src={ArrowDown} alt="arrow-down"  />
+      {isActive ?  (<img src={ArrowUp} alt="arrow-down"/>) : (<img src={ArrowDown} alt="arrow-down"/>) }
       </div>
       <div
         ref={ref}
@@ -40,6 +43,10 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
         className={`accordion__content ${isActive ? 'accordion__content--active' : ''}`}
       >
         {content}
+        {extraAns ? (<div><br/> <br/></div>) :("")}
+        {extraAns}  
+        <br/> 
+         <a  href={link} target="_blank">learn more ></a>
       </div>
     </div>
   );
