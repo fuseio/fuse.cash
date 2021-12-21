@@ -16,6 +16,7 @@
   min-height: 100vh;
   max-width: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 @include block(backdrop){
   width:100%;
@@ -37,6 +38,9 @@
     font-size: 24rem;
     font-family: 'Avenir';
     font-weight: 500;
+    @include breakpoint(small down) {
+     font-size: 16px;
+    }
   }
   @include element(item) {
     background-color: #3CD49B;
@@ -48,7 +52,11 @@
       background-color: #02532A;
     }
     @include breakpoint(medium down){
-      padding: 6rem 21rem 6rem 21rem;
+      padding: 9rem 15rem 9rem 28rem;
+    }
+    @include breakpoint(small down) {
+      margin-bottom: 0;
+      border-radius: 0;
     }
   }
   
@@ -60,9 +68,12 @@
     font-family: 'Avenir';
     font-weight: 500;
     margin-top: 10px;
-    a{
+    a {
       color: #3CD49B;
       font-weight: 500;
+    }
+    @include breakpoint(small down){
+      font-size: 12rem;
     }
   }
 }
@@ -71,16 +82,19 @@
   @include xy-grid-container();
   margin-top: 24.25em;
   max-width: 873rem;
-  @include breakpoint(medium down){
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  
   @include element(title) {
     color: #fff;
     font-size: 35rem;
     margin-bottom: 12rem;
     font-family: 'Avenir 85';
     font-weight: bold;
+    @include breakpoint(small down) {
+      display: none;
+    }
+  }
+  @include breakpoint(small down) {
+    margin-top: 4.1875em;
   }
 }
 
@@ -138,9 +152,10 @@
   margin-bottom: 1px;
   background-color: black;
   border: 1px solid #47CC8A;
-  @include breakpoint(medium down){
-    padding: 0 30px;
+  @include breakpoint(small down){
+    padding: 0 35px;
     gap: 20px;
+    height:65px;
   }
   img{
     @include breakpoint(small down){
@@ -171,11 +186,35 @@
       transition: all 0.2s ease-in-out;
     }
     @include breakpoint(small down){
-      width: 210px;
-      font-size: 18px;
-      height: 45px;
+      display: none;
     }
   }
+
+  @include element(buttonMobile){
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background-color: #47CC8A;
+    border-radius: 10px;
+    width: 136px;
+    height: 35px;
+    font-family: 'Avenir 85';
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: white;
+      color: #47CC8A;
+      transition: all 0.2s ease-in-out;
+    }
+    @include breakpoint(small down){
+      display: flex;
+    }
+    
+  }
+
+
   @include element(popup){
     position: absolute;
     background-color: white;
@@ -213,11 +252,19 @@
   @include xy-grid(vertical);
   @include flex-align(center, middle);
   @include xy-grid-container();
-
+  @include breakpoint(small down){
+   background-position: top;
+   background-size: cover;
+  }
   @include element(firstPlanet){
   position: absolute;
   top: 3%;
   left: 3%;
+  @include breakpoint(small down){
+    left: -17%;
+    top: -6%;
+    width: 127px;
+  }
 }
 
   @include element(secondPlanet){
@@ -228,6 +275,10 @@
     @include breakpoint(medium down){
       max-height: 200px;
       top: 20.5%;
+    }
+    @include breakpoint(small down){
+      top: 13%;
+      max-height: 145px;
     }
   }
 
@@ -240,6 +291,21 @@
         max-height: 200px;
         top: 23%;
       }
+      @include breakpoint(small down){
+        top: 22%;
+        max-height: 120px;
+      }
+    }
+  
+    @include element(MobileView) {
+      @include breakpoint(small down){
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding-bottom:10px;
+      }
+    
     }
 
   @include element(title) {
@@ -254,10 +320,21 @@
     svg{
       max-width: 814px;
       width: 100%;
+      @include breakpoint(small down){
+        padding: 0 0px;
+        height: 202px;
+      }
     }
     img {
       position: absolute;
       bottom: 61rem;
+      @include breakpoint(small down){
+        display: none;
+      }
+    }
+    @include breakpoint(small down){
+      padding: 0 20px;
+      height: auto;
     }
   }
   @include element(subTitle){
@@ -269,13 +346,19 @@
 
   @include block(use_your) {
     font-size: 3.325em;
-    font-family: "GTWalsheimPro-Medium";
     font-family: "Integral CF";
     font-weight: 900;
     color: white;
     text-align: center;
     padding-bottom: 1em;
     margin-top: 349px;
+    @include breakpoint(small down) {
+      margin-top: 63.4px;
+      font-size: 1.1875em;
+      max-width: 100%;
+      padding: 0 1.9375em;
+      line-height: 27px;
+    }
 
     @include block(title) {
       font-family: "GTWalsheimPro-Bold";
@@ -300,19 +383,14 @@
         width: 150px;
       }
     }
-    @include breakpoint(small down) {
-      font-size: 1.725em;
-    }
+   
     > span {
       color: #47cd8a;
       font-family: "GTWalsheimPro-Bold";
       font-weight: bold;
       font-style: italic;
     }
-    @include breakpoint(medium down) {
-      padding-bottom: 5em;
-      max-width: 90%;
-    }
+   
     @include breakpoint(large up) {
       max-width:1383px;
     }
@@ -325,16 +403,19 @@
     @include block(phone) {
       max-width: 850px;
       margin-bottom: -135px;
+      @include breakpoint(medium down){
+        max-width: 100%;
+      }
+      @include breakpoint(small down){
+        max-width: 100%;
+        margin-bottom: -50px;
+        max-height: 350px;
+      }
     }
 
     
 
-    @include block(phone) {
-      
-      @include breakpoint(small down) {
-        width: 250px;
-      }
-    }
+   
   }
 
   @include block(download){
@@ -353,6 +434,36 @@
       background-color: white;
       color: #47CC8A;
       transition: all 0.2s ease-in-out;
+    }
+    @include breakpoint(small down) {
+      display: none;
+    }
+  }
+
+  @include block(downloadMobile){
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    width: 365px;
+    display: none;
+    border-radius: 10px;
+    background-color: #47CC8A;
+    text-align: center;
+    z-index: 999;
+    font-family: 'Avenir 85';
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: white;
+      color: #47CC8A;
+      transition: all 0.2s ease-in-out;
+    }
+    @include breakpoint(small down) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -397,6 +508,16 @@
       width: 143px;
     }
    
+  }
+
+  @include block(arrow-downMobile){
+    display: none;
+    @include breakpoint(small down) {
+      display: block;
+      margin: 40px auto 0 auto;
+      max-width: 22px;
+      max-height: 28px;
+    }
   }
 
   @include block(image) {
@@ -467,6 +588,9 @@
       row-gap: 40px;
       padding: 77px 30px;
     }
+    @include breakpoint(small down){
+     padding:42px 36px;
+    }
 
     @include block(logo){
       h2{
@@ -475,10 +599,17 @@
         line-height: 24px;
         font-family: 'Lato';
         font-weight: normal;
+        @include breakpoint(small down){
+         font-size: 16px;
+        }
         span{
           font-family: 'Lato';
           font-weight: 300;
         }
+      }
+      @include breakpoint(small down){
+        grid-column-start: 1;
+        grid-column-end: 3;
       }
     }
 
@@ -488,15 +619,22 @@
       gap:22px;
       color: white;
       font-size: 18px;
+      @include breakpoint(small down){
+        font-size: 16px;
+        gap: 17px;
+      }
       h3{
-      
         font-family: 'Avenir';
         font-weight: 500;
+        @include breakpoint(small down){
+          font-size: 21px;
+        }
       }
       a {
         font-family: 'Avenir LT Std';
         font-weight: normal;
       }
+     
     }
 
     @include block(footer-last){
@@ -507,13 +645,20 @@
       @include breakpoint(medium down){
         margin-left: 0;
       }
+      @include breakpoint(small down){
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
     }
 
     @include block(footer-downloadContainer){
       display: flex;
       align-items: flex-end;
       gap:20px;
-      justify-content:space-between
+      justify-content:space-between;
+      @include breakpoint(small down){
+       display: none;
+      }
     }
     @include block(footer-QR){
       padding: 15px;

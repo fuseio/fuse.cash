@@ -118,6 +118,7 @@ function HomePage () {
         <h3>Scan</h3>
         <QRCode size='138' value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
       </div>
+      <a href='https://click.fuse.cash/mrxn/7496231e' target="_blank"  className='nav__buttonMobile'>Download app</a>
     </div>
     </nav>
     <section className='main' style={{ backgroundImage: `url(${Stars})` }}>
@@ -125,6 +126,7 @@ function HomePage () {
       <img className='main__secondPlanet' src={SecondPlanet} alt='second-planet' ref={starRef} />
       <img className='main__thirdPlanet' src={ThirdPlanet} alt='third-planet' ref={phoneRef} />
       <img style={{ display: 'none' }} src={Stars} />
+      <div className='main__MobileView'>
       <div className='main__title' >
       <svg xmlns='http://www.w3.org/2000/svg'  height='352.304' viewBox='0 0 814.661 352.304'>
   <g id='Group_5' data-name='Group 5' transform='matrix(0.996, -0.087, 0.087, 0.996, -0.289, 64.609)'>
@@ -174,7 +176,7 @@ function HomePage () {
 
       <div>
 
-      <div style={{position:'relative'}}>
+      <div style={{position:'relative',display:'flex',justifyContent:'center'}}>
         <div className={`large_popup ${toggleMainPopup ? 'large_popup--open': ''}`}>
         <QRCode size='298' value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
         <h3>Scan Me</h3>
@@ -182,6 +184,9 @@ function HomePage () {
         <button onClick={handleMainPopup} className='download'>
         Download app
         </button>
+        <a href='https://click.fuse.cash/mrxn/7496231e' target="_blank" className='downloadMobile'>
+        Download app
+        </a>
       </div>
 
       <div className='download_store'>
@@ -191,6 +196,8 @@ function HomePage () {
           <a rel='noreferrer noopener' target='_blank' href='https://play.google.com/store/apps/details?id=io.fuse.cash'>
             <img src={Google} />
           </a>
+      </div>
+      <img className='arrow-downMobile'  src={Arrows}  alt='down-arrows' />
       </div>
       </div>
       <section className='faq'>
