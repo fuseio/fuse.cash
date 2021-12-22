@@ -217,7 +217,7 @@ function HomePage () {
               <div className='footer-links'>
                 <h3>DApp</h3>
                 <a href='https://fuse.fi/' rel='noreferrer noopener' target='_blank'>fuse.fi</a>
-                <a>Fuse Staking</a>
+                <a href='https://staking.fuse.io' rel='noreferrer noopener' target='_blank'>Fuse Staking</a>
               </div>
 
               <div className='footer-links'>
