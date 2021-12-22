@@ -211,27 +211,26 @@ function HomePage () {
             <div className='footer grid-x  align-justify'>
               <div className='logo'>
                 <img src={FooterLogo} alt='logo' />
-                <h2>Contact us: <br /> <span>hello@fuse.io</span></h2>
+                <h2>Contact us: <br /> <span>hello@fuse.cash</span></h2>
               </div>
 
               <div className='footer-links'>
                 <h3>DApp</h3>
-                <a>Fuse Swap</a>
-                <a>Fuse Rewards</a>
+                <a href='https://fuse.fi/' rel='noreferrer noopener' target='_blank'>fuse.fi</a>
                 <a>Fuse Staking</a>
               </div>
 
               <div className='footer-links'>
                 <h3>Social Media</h3>
-                <a>Twitter</a>
-                <a>GitHub</a>
-                <a>Discord</a>
-                <a>Medium</a>
-                <a>Telegram</a>
+                <a href='https://twitter.com/Get_Fuse_Cash' rel='noreferrer noopener' target='_blank'>Twitter</a>
+                <a href='https://github.com/fuseio/fuse.cash' rel='noreferrer noopener' target='_blank'>GitHub</a>
+                <a href='https://discord.com/invite/jpPMeSZ' rel='noreferrer noopener' target='_blank'>Discord</a>
+                <a href='https://medium.com/fusenet' rel='noreferrer noopener' target='_blank'>Medium</a>
+                <a href='https://t.me/fusecash' rel='noreferrer noopener' target='_blank'>Telegram</a>
               </div>
 
               <div className='footer-links'>
-                <h3>Support</h3>
+                <a className='footer-links__specialLink' href='https://help.fuse.cash/en/' rel='noreferrer noopener' target='_blank'>Support</a>
               </div>
               <div className='footer-last'>
                 <div className='footer_input'>
