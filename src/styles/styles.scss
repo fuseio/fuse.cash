@@ -640,6 +640,10 @@
         font-family: 'Avenir LT Std';
         font-weight: normal;
       }
+      @include element(specialLink){
+        font-family: 'Avenir' !important;
+        font-weight: 500 !important;
+      }
      
     }
 
