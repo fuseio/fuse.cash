@@ -1,12 +1,13 @@
-import React, { useRef, useEffect } from 'react';
-import ArrowDown from "@/assets/images/arrow-down.png"
-import ArrowUp from "@/assets/images/arrow-up.png"
-export default function Accordion({ items, titleKey, contentKey }) {
-  const [activeIndex, setActiveIndex] = React.useState(null);
+import React, { useRef } from 'react'
+import ArrowDown from '@/assets/images/arrow-down.png'
+import ArrowUp from '@/assets/images/arrow-up.png'
+
+export default function Accordion ({ items, titleKey, contentKey }) {
+  const [activeIndex, setActiveIndex] = React.useState(null)
 
   const onOpen = (index) => {
-    setActiveIndex((currIndex) => (currIndex === index ? null : index));
-  };
+    setActiveIndex((currIndex) => (currIndex === index ? null : index))
+  }
 
   return (
     <div className='accordion'>
@@ -23,19 +24,19 @@ export default function Accordion({ items, titleKey, contentKey }) {
         />
       ))}
     </div>
-  );
+  )
 }
 
-function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadding = 40, link, extraAns }) {
-  const ref = useRef(null);
+function AccordionItem ({ id, title, content, isActive, onOpen, contentBottomPadding = 40, link, extraAns }) {
+  const ref = useRef(null)
 
   return (
-    <div  onClick={() => onOpen(id)} className={`accordion__item ${isActive ? 'accordion__item--active' : ''}`}>
+    <div onClick={() => onOpen(id)} className={`accordion__item ${isActive ? 'accordion__item--active' : ''}`}>
       <div className='accordion__contentContainer'>
-      <div className='accordion__title'>
-        {title}
-      </div>
-      {isActive ?  (<img src={ArrowUp} alt="arrow-down"/>) : (<img src={ArrowDown} alt="arrow-down"/>) }
+        <div className='accordion__title'>
+          {title}
+        </div>
+        {isActive ? (<img src={ArrowUp} alt='arrow-down' />) : (<img src={ArrowDown} alt='arrow-down' />)}
       </div>
       <div
         ref={ref}
@@ -43,11 +44,11 @@ function AccordionItem({ id, title, content, isActive, onOpen, contentBottomPadd
         className={`accordion__content ${isActive ? 'accordion__content--active' : ''}`}
       >
         {content}
-        {extraAns ? (<><br/> <br/></>) :("")}
-        {extraAns}  
-        <br/> 
-         <a  href={link} target="_blank">learn more ></a>
+        {extraAns ? (<><br /> <br /></>) : ('')}
+        {extraAns}
+        <br />
+        <a href={link} rel='noreferrer noopener' target='_blank'>learn more {'>'}</a>
       </div>
     </div>
-  );
+  )
 }
