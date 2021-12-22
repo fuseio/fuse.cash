@@ -107,7 +107,7 @@ function HomePage () {
 
           <div className={`nav__popup ${toggleNavPopup ? 'nav__popup--open' : ''}`}>
             <h3>Scan</h3>
-            <QRCode size='138' value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
+            <QRCode size={138} value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
           </div>
           <a href='https://click.fuse.cash/mrxn/7496231e' rel='noreferrer noopener' target='_blank' className='nav__buttonMobile'>Download app</a>
         </div>
@@ -169,7 +169,7 @@ function HomePage () {
 
             <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
               <div className={`large_popup ${toggleMainPopup ? 'large_popup--open' : ''}`}>
-                <QRCode size='298' value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
+                <QRCode size={298} value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
                 <h3>Scan Me</h3>
               </div>
               <button onClick={handleMainPopup} className='download'>
@@ -241,7 +241,7 @@ function HomePage () {
                 <div className='footer-downloadContainer'>
                   <div className='footer-QR'>
 
-                    <QRCode size='100' value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
+                    <QRCode size={100} value='https://click.fuse.cash/mrxn/7496231e?af_qr=true' />
                   </div>
                   <div className='download_store-footer'>
 
