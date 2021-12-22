@@ -216,21 +216,21 @@ function HomePage () {
 
               <div className='footer-links'>
                 <h3>DApp</h3>
-                <a href='https://fuse.fi/' target='_blank'>fuse.fi</a>
+                <a href='https://fuse.fi/' rel='noreferrer noopener' target='_blank'>fuse.fi</a>
                 <a>Fuse Staking</a>
               </div>
 
               <div className='footer-links'>
                 <h3>Social Media</h3>
-                <a href='https://twitter.com/Get_Fuse_Cash' target='_blank'>Twitter</a>
-                <a href='https://github.com/fuseio/fuse.cash' target='_blank'>GitHub</a>
-                <a href='https://discord.com/invite/jpPMeSZ' target='_blank'>Discord</a>
-                <a href='https://medium.com/fusenet' target='_blank'>Medium</a>
-                <a href='https://t.me/fusecash' target='_blank'>Telegram</a>
+                <a href='https://twitter.com/Get_Fuse_Cash' rel='noreferrer noopener' target='_blank'>Twitter</a>
+                <a href='https://github.com/fuseio/fuse.cash' rel='noreferrer noopener' target='_blank'>GitHub</a>
+                <a href='https://discord.com/invite/jpPMeSZ' rel='noreferrer noopener' target='_blank'>Discord</a>
+                <a href='https://medium.com/fusenet' rel='noreferrer noopener' target='_blank'>Medium</a>
+                <a href='https://t.me/fusecash' rel='noreferrer noopener' target='_blank'>Telegram</a>
               </div>
 
               <div className='footer-links'>
-                <a className='footer-links__specialLink' href='http://help.fuse.cash/en/' target='_blank'>Support</a>
+                <a className='footer-links__specialLink' href='https://help.fuse.cash/en/' rel='noreferrer noopener' target='_blank'>Support</a>
               </div>
               <div className='footer-last'>
                 <div className='footer_input'>
