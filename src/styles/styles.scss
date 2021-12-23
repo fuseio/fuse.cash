@@ -18,65 +18,65 @@
   margin: 0 auto;
   overflow-x: hidden;
 }
-@include block(backdrop){
-  width:100%;
-  height:100%;
-  position: absolute
+@include block(backdrop) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 @include block(accordion) {
   @include xy-grid(vertical);
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   @include breakpoint(small down) {
     > div:first-child {
-      margin-bottom: .2em;
+      margin-bottom: 0.2em;
     }
   }
-  @include element(contentContainer){
-    display:flex;
+  @include element(contentContainer) {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  @include element(title){
+  @include element(title) {
     font-size: 24rem;
-    font-family: 'Avenir';
+    font-family: "Avenir";
     font-weight: 500;
     @include breakpoint(small down) {
-     font-size: 16px;
+      font-size: 16px;
     }
   }
   @include element(item) {
-    background-color: #3CD49B;
+    background-color: #3cd49b;
     padding: 6rem 36rem 6rem 36rem;
     border-radius: 10rem;
     margin-bottom: 17rem;
     transition: padding ease 0.3s;
     @include modifier(active) {
-      background-color: #02532A;
+      background-color: #02532a;
     }
-    @include breakpoint(medium down){
+    @include breakpoint(medium down) {
       padding: 9rem 15rem 9rem 28rem;
     }
     @include breakpoint(small down) {
       margin-bottom: 0;
     }
   }
-  
+
   @include element(content) {
     overflow: hidden;
     height: 0;
     transition: all ease 0.3s;
     font-size: 18rem;
-    font-family: 'Avenir';
+    font-family: "Avenir";
     font-weight: 500;
     margin-top: 10px;
     a {
-      color: #3CD49B;
+      color: #3cd49b;
       font-weight: 500;
     }
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       font-size: 12rem;
     }
   }
@@ -93,7 +93,7 @@
     color: #fff;
     font-size: 35rem;
     margin-bottom: 12rem;
-    font-family: 'Avenir 85';
+    font-family: "Avenir 85";
     font-weight: bold;
     @include breakpoint(small down) {
       display: none;
@@ -144,11 +144,11 @@
   }
 }
 
-@include block(nav){
+@include block(nav) {
   min-height: 80px;
   max-width: 1630px;
   margin: 0 auto;
-  padding:0 103px;
+  padding: 0 103px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -157,90 +157,88 @@
   z-index: 9999;
   margin-bottom: 1px;
   background-color: black;
-  border: 1px solid #47CC8A;
-  @include breakpoint(small down){
+  border: 1px solid #47cc8a;
+  @include breakpoint(small down) {
     padding: 0 35px;
     gap: 20px;
-    height:65px;
+    height: 65px;
   }
-  img{
-    @include breakpoint(small down){
+  img {
+    @include breakpoint(small down) {
       max-width: 120px;
     }
   }
 
-  @include element(content){
+  @include element(content) {
     position: relative;
   }
 
-  @include element(button){
+  @include element(button) {
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    background-color: #47CC8A;
+    background-color: #47cc8a;
     border-radius: 10px;
     width: 238px;
     height: 50px;
-    font-family: 'Avenir 85';
+    font-family: "Avenir 85";
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-    &:hover{
+    &:hover {
       background-color: white;
-      color: #47CC8A;
+      color: #47cc8a;
       transition: all 0.2s ease-in-out;
     }
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       display: none;
     }
   }
 
-  @include element(buttonMobile){
+  @include element(buttonMobile) {
     color: white;
     display: none;
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    background-color: #47CC8A;
+    background-color: #47cc8a;
     border-radius: 10px;
     width: 136px;
     height: 35px;
-    font-family: 'Avenir 85';
+    font-family: "Avenir 85";
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-    &:hover{
+    &:hover {
       background-color: white;
-      color: #47CC8A;
+      color: #47cc8a;
       transition: all 0.2s ease-in-out;
     }
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       display: flex;
     }
-    
   }
 
-
-  @include element(popup){
+  @include element(popup) {
     position: absolute;
     background-color: white;
-    top:0;
-    border: 1px solid #47CC8A;
+    top: 0;
+    border: 1px solid #47cc8a;
     border-radius: 10px;
     width: 238px;
     padding: 12.5px 50px 47px 50px;
-    height:0;
+    height: 0;
     visibility: hidden;
-    opacity:0;
+    opacity: 0;
     transition: all 0.5s ease-in-out;
 
-    h3{
-      font-family: 'Avenir';
+    h3 {
+      font-family: "Avenir";
       font-size: 20px;
       font-weight: 900;
-      color: #47CC8A;
+      color: #47cc8a;
       text-align: center;
-      padding-bottom:23.5px;
+      padding-bottom: 23.5px;
     }
     @include modifier(open) {
       visibility: visible;
@@ -254,65 +252,64 @@
   background-repeat: no-repeat;
   // padding-top: 25em;
   position: relative;
-  
+
   @include xy-grid(vertical);
   @include flex-align(center, middle);
   @include xy-grid-container();
-  @include breakpoint(small down){
-   background-position: top;
-   background-size: cover;
+  @include breakpoint(small down) {
+    background-position: top;
+    background-size: cover;
   }
-  @include element(firstPlanet){
-  position: absolute;
-  top: 3%;
-  left: 3%;
-  @include breakpoint(small down){
-    left: -17%;
-    top: -6%;
-    width: 127px;
+  @include element(firstPlanet) {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    @include breakpoint(small down) {
+      left: -17%;
+      top: -6%;
+      width: 127px;
+    }
   }
-}
 
-  @include element(secondPlanet){
+  @include element(secondPlanet) {
     position: absolute;
     top: 15.5%;
     max-height: 744px;
     right: 0;
-    @include breakpoint(medium down){
+    @include breakpoint(medium down) {
       max-height: 200px;
       top: 20.5%;
     }
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       top: 13%;
       max-height: 145px;
     }
   }
 
-    @include element(thirdPlanet){
-      position: absolute;
-      top:24.9%;
-      left:0%;
-      max-height: 600px;
-      @include breakpoint(medium down){
-        max-height: 200px;
-        top: 23%;
-      }
-      @include breakpoint(small down){
-        top: 22%;
-        max-height: 120px;
-      }
+  @include element(thirdPlanet) {
+    position: absolute;
+    top: 24.9%;
+    left: 0%;
+    max-height: 600px;
+    @include breakpoint(medium down) {
+      max-height: 200px;
+      top: 23%;
     }
-  
-    @include element(MobileView) {
-      @include breakpoint(small down){
-        height: calc(100vh - 80px);
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding-bottom:10px;
-      }
-    
+    @include breakpoint(small down) {
+      top: 22%;
+      max-height: 120px;
     }
+  }
+
+  @include element(MobileView) {
+    @include breakpoint(small down) {
+      height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding-bottom: 10px;
+    }
+  }
 
   @include element(title) {
     text-align: center;
@@ -323,10 +320,10 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    svg{
+    svg {
       max-width: 814px;
       width: 100%;
-      @include breakpoint(small down){
+      @include breakpoint(small down) {
         padding: 0 0px;
         height: 202px;
       }
@@ -334,18 +331,18 @@
     img {
       position: absolute;
       bottom: 61rem;
-      @include breakpoint(small down){
+      @include breakpoint(small down) {
         display: none;
       }
     }
-    @include breakpoint(small down){
+    @include breakpoint(small down) {
       padding: 0 20px;
       height: auto;
     }
   }
-  @include element(subTitle){
+  @include element(subTitle) {
     color: #47cd8a;
-    border: 9px solid #47CC8A;
+    border: 9px solid #47cc8a;
     background-color: white;
     padding: 4px 18px 16px 18px;
   }
@@ -389,16 +386,16 @@
         width: 150px;
       }
     }
-   
+
     > span {
       color: #47cd8a;
       font-family: "GTWalsheimPro-Bold";
       font-weight: bold;
       font-style: italic;
     }
-   
+
     @include breakpoint(large up) {
-      max-width:1383px;
+      max-width: 1383px;
     }
   }
 
@@ -409,36 +406,32 @@
     @include block(phone) {
       max-width: 850px;
       margin-bottom: -135px;
-      @include breakpoint(medium down){
+      @include breakpoint(medium down) {
         max-width: 100%;
       }
-      @include breakpoint(small down){
+      @include breakpoint(small down) {
         max-width: 100%;
         margin-bottom: -50px;
         max-height: 350px;
       }
     }
-
-    
-
-   
   }
 
-  @include block(download){
+  @include block(download) {
     font-size: 24px;
     color: white;
     height: 70px;
     width: 365px;
     border-radius: 10px;
-    background-color: #47CC8A;
+    background-color: #47cc8a;
     text-align: center;
     z-index: 999;
-    font-family: 'Avenir 85';
+    font-family: "Avenir 85";
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-    &:hover{
+    &:hover {
       background-color: white;
-      color: #47CC8A;
+      color: #47cc8a;
       transition: all 0.2s ease-in-out;
     }
     @include breakpoint(small down) {
@@ -446,22 +439,22 @@
     }
   }
 
-  @include block(downloadMobile){
+  @include block(downloadMobile) {
     font-size: 20px;
     color: white;
     height: 50px;
     width: 365px;
     display: none;
     border-radius: 10px;
-    background-color: #47CC8A;
+    background-color: #47cc8a;
     text-align: center;
     z-index: 999;
-    font-family: 'Avenir 85';
+    font-family: "Avenir 85";
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-    &:hover{
+    &:hover {
       background-color: white;
-      color: #47CC8A;
+      color: #47cc8a;
       transition: all 0.2s ease-in-out;
     }
     @include breakpoint(small down) {
@@ -473,11 +466,11 @@
     }
   }
 
-  @include block(large_popup){
+  @include block(large_popup) {
     position: absolute;
     background-color: white;
     bottom: 0;
-    border: 1px solid #47CC8A;
+    border: 1px solid #47cc8a;
     border-radius: 10px;
     width: 365px;
     padding: 28px 32px 35px 32px;
@@ -486,15 +479,15 @@
     opacity: 0;
     transition: all 0.5s ease-in-out;
 
-    h3{
-      font-family: 'Avenir';
+    h3 {
+      font-family: "Avenir";
       font-size: 20px;
       font-weight: 500;
-      color: #47CC8A;
+      color: #47cc8a;
       text-align: center;
-      padding-top:12px;
+      padding-top: 12px;
     }
-    svg{
+    svg {
       height: calc(100% - 38px);
     }
     @include modifier(open) {
@@ -503,229 +496,225 @@
       opacity: 100%;
     }
   }
-  }
+}
 
-  @include block (download_store){
-    display: flex;
-    gap: 12px;
-    margin-top: 22px;
-    justify-content: center;
-    img{
-      width: 143px;
+@include block(download_store) {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  justify-content: center;
+  img {
+    width: 143px;
+  }
+}
+
+@include block(arrow-downMobile) {
+  display: none;
+  @include breakpoint(small down) {
+    display: block;
+    margin: 40px auto 0 auto;
+    max-width: 22px;
+    max-height: 28px;
+  }
+}
+
+@include block(image) {
+  position: relative;
+
+  @include block(logo) {
+    @include element(wrapper) {
+      @include breakpoint(medium down) {
+        background: black;
+        padding: 1.4em;
+      }
+      @include breakpoint(medium up) {
+        padding: 0.4em;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      svg {
+        // width: 70px;
+        height: 25px;
+        // max-width: 70px;
+        padding-bottom: 0.4em;
+      }
+      span {
+        font-weight: bold;
+        color: white;
+      }
     }
-   
   }
 
-  @include block(arrow-downMobile){
-    display: none;
-    @include breakpoint(small down) {
-      display: block;
-      margin: 40px auto 0 auto;
-      max-width: 22px;
-      max-height: 28px;
-    }
-  }
-
-  @include block(image) {
+  @include element(wrapper) {
     position: relative;
 
-    @include block(logo) {
-      @include element(wrapper) {
-        @include breakpoint(medium down) {
-          background: black;
-          padding: 1.4em;
-        }
-        @include breakpoint(medium up) {
-          padding: 0.4em;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-        }
-
-        svg {
-          // width: 70px;
-          height: 25px;
-          // max-width: 70px;
-          padding-bottom: 0.4em;
-        }
-        span {
-          font-weight: bold;
-          color: white;
-        }
-      }
-    }
-
-    @include element(wrapper) {
-      position: relative;
-
-      @include block(button) {
-        background-color: #47cd8a;
-        font-family: "GTWalsheimPro-Medium";
-        color: black;
-        text-align: center;
-        border-radius: 10px;
-        font-size: 1.7em;
-        padding: 10px;
-        z-index: 999;
-        svg {
-          width: 25px;
-          margin-right: 0.5em;
-        }
-      }
-    }
-  }
-
-  @include block(land) {
-    margin-bottom: auto;
-  }
-
-  @include block(footer) {
-    padding: 1em;
-    background-color: #02532A;
-    color: white;
-    padding: 77px 103px;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    width: 100%;
-    font-size: 1em;
-    font-family: "GTWalsheimPro-Medium";
-    @include breakpoint(medium down){
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      row-gap: 40px;
-      padding: 77px 30px;
-    }
-    @include breakpoint(small down){
-     padding:42px 36px;
-    }
-
-    @include block(logo){
-      h2{
-        margin-top: 9px;
-        font-size: 20px;
-        line-height: 24px;
-        font-family: 'Lato';
-        font-weight: normal;
-        @include breakpoint(small down){
-         font-size: 16px;
-        }
-        span{
-          font-family: 'Lato';
-          font-weight: 300;
-        }
-      }
-      @include breakpoint(small down){
-        grid-column-start: 1;
-        grid-column-end: 3;
-      }
-    }
-
-    @include block(footer-links){
-      display: flex;
-      flex-direction: column;
-      gap:22px;
-      color: white;
-      font-size: 18px;
-      @include breakpoint(small down){
-        font-size: 16px;
-        gap: 17px;
-      }
-      h3{
-        font-family: 'Avenir';
-        font-weight: 500;
-        @include breakpoint(small down){
-          font-size: 21px;
-        }
-      }
-      a {
-        font-family: 'Avenir LT Std';
-        font-weight: normal;
-      }
-      @include element(specialLink){
-        font-family: 'Avenir' !important;
-        font-weight: 500 !important;
-      }
-     
-    }
-
-    @include block(footer-last){
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-left: -99px;
-      @include breakpoint(medium down){
-        margin-left: 0;
-      }
-      @include breakpoint(small down){
-        grid-column-start: 1;
-        grid-column-end: 3;
-      }
-    }
-
-    @include block(footer-downloadContainer){
-      display: flex;
-      align-items: flex-end;
-      gap:20px;
-      justify-content:space-between;
-      @include breakpoint(small down){
-       display: none;
-      }
-    }
-    @include block(footer-QR){
-      padding: 15px;
-      background-color: white;
-      border: 1px solid #47CC8A;
+    @include block(button) {
+      background-color: #47cd8a;
+      font-family: "GTWalsheimPro-Medium";
+      color: black;
+      text-align: center;
       border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-size: 1.7em;
+      padding: 10px;
+      z-index: 999;
+      svg {
+        width: 25px;
+        margin-right: 0.5em;
+      }
     }
-    @include block(download_store-footer){
+  }
+}
+
+@include block(land) {
+  margin-bottom: auto;
+}
+
+@include block(footer) {
+  padding: 1em;
+  background-color: #02532a;
+  color: white;
+  padding: 77px 103px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 100%;
+  font-size: 1em;
+  font-family: "GTWalsheimPro-Medium";
+  @include breakpoint(medium down) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 40px;
+    padding: 77px 30px;
+  }
+  @include breakpoint(small down) {
+    padding: 42px 36px;
+  }
+
+  @include block(logo) {
+    h2 {
+      margin-top: 9px;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: "Lato";
+      font-weight: normal;
+      @include breakpoint(small down) {
+        font-size: 16px;
+      }
+      span {
+        font-family: "Lato";
+        font-weight: 300;
+      }
+    }
+    @include breakpoint(small down) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  @include block(footer-links) {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    color: white;
+    font-size: 18px;
+    @include breakpoint(small down) {
+      font-size: 16px;
+      gap: 17px;
+    }
+    h3 {
+      font-family: "Avenir";
+      font-weight: 500;
+      @include breakpoint(small down) {
+        font-size: 21px;
+      }
+    }
+    a {
+      font-family: "Avenir LT Std";
+      font-weight: normal;
+    }
+    @include element(specialLink) {
+      font-family: "Avenir" !important;
+      font-weight: 500 !important;
+    }
+  }
+
+  @include block(footer-last) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -99px;
+    @include breakpoint(medium down) {
+      margin-left: 0;
+    }
+    @include breakpoint(small down) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  @include block(footer-downloadContainer) {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 2em;
+    @include breakpoint(small down) {
+      display: none;
+    }
+  }
+  @include block(footer-QR) {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #47cc8a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include block(download_store-footer) {
     max-width: 200px;
     display: flex;
     gap: 12px;
     margin-top: 22px;
     justify-content: center;
-    }
-    @include block(footer_input){
-      border: 1px solid white;
-      display: flex;
-      align-items: center;
-      @include breakpoint(medium down){
-        width: 305px;
-      }
-    }
-    input{
-      padding:12px 0px 12px 12px;
-      font-size: 12px;
-      color: white;
-      font-family: 'Lato';
-      font-weight: 300;
-      background-color: transparent;
-      border: none;
-      width: 385px;
-    }
-    ::placeholder{
-      color: white;
-    }
-    button{
-      background-color: white;
-      font-size: 20px;
-      font-weight: bold;
-      height: 40px;
-      color: #02532A;
-      min-width: 130px;
-      padding: 0 10px;
-      font-family: 'Lato';
-      font-weight: bold;
-      @include breakpoint(medium down){
-        font-size: 16px;
-        min-width: 99px;
-      }
-    }
-
   }
-  
-
+  @include block(footer_input) {
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    @include breakpoint(medium down) {
+      width: 305px;
+    }
+  }
+  input {
+    padding: 12px 0px 12px 12px;
+    font-size: 12px;
+    color: white;
+    font-family: "Lato";
+    font-weight: 300;
+    background-color: transparent;
+    border: none;
+    width: 385px;
+  }
+  ::placeholder {
+    color: white;
+  }
+  button {
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    color: #02532a;
+    min-width: 130px;
+    padding: 0 10px;
+    font-family: "Lato";
+    font-weight: bold;
+    @include breakpoint(medium down) {
+      font-size: 16px;
+      min-width: 99px;
+    }
+  }
+}
 
 @include block(pending) {
   background: #38d989;
