@@ -7,7 +7,7 @@ const HomePage = lazy(() => import('@/pages/HomePage'))
 const Privacy = lazy(() => import('@/pages/PrivacyPolicy'))
 const PendingTransaction = lazy(() => import('@/pages/PendingTransaction'))
 
-function Loader() {
+function Loader () {
   return (
     <div className='loader-container'>
       <div className='loader' />
@@ -15,7 +15,7 @@ function Loader() {
   )
 }
 
-function App() {
+function App () {
   return (
     <StrictMode>
       <Suspense fallback={<Loader />}>
