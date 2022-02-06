@@ -21,6 +21,7 @@ function App () {
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path='/privacy' component={Privacy} />
+          <Route path='/privacy-policy' component={Privacy} />
           <Route path='/pending' component={PendingTransaction} />
           <Route path='/' component={HomePage} />
         </Switch>
