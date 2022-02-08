@@ -4,7 +4,8 @@ import { hot } from 'react-hot-loader'
 import { lazy } from '@loadable/component'
 import { Route, Switch } from 'wouter'
 const HomePage = lazy(() => import('@/pages/HomePage'))
-const Privacy = lazy(() => import('@/pages/PrivacyPolicy'))
+const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'))
+const Privacy = lazy(() => import('@/pages/Privacy'))
 const PendingTransaction = lazy(() => import('@/pages/PendingTransaction'))
 
 function Loader () {
@@ -21,7 +22,7 @@ function App () {
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path='/privacy' component={Privacy} />
-          <Route path='/privacy-policy' component={Privacy} />
+          <Route path='/privacy-policy' component={PrivacyPolicy} />
           <Route path='/pending' component={PendingTransaction} />
           <Route path='/' component={HomePage} />
         </Switch>
